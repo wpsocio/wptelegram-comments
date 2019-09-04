@@ -1,0 +1,143 @@
+# Copyright (C) 2019
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: "
+"http://wordpress.org/support/plugin/wptelegram-comments\n"
+"POT-Creation-Date: 2019-09-04 15:07:37+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-09-4 15:7+-330\n"
+"Last-Translator: WP Telegram Comments\n"
+"Language-Team: WP Telegram Comments\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: admin/class-wptelegram-comments-admin.php:245
+msgid "Telegram Comments"
+msgstr ""
+
+#: includes/class-wptelegram-comments.php:128
+msgid "WP Telegram Comments"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:5
+msgid "Configuration"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:8
+msgid "Please read the instructions above."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:11
+msgid "The comments widget will be shown on the selected post types."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:14
+msgid ""
+"To exclude the specific posts, enter the post or page IDs separated by "
+"comma."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:17
+msgid ""
+"With this plugin, you can add comments to posts/pages on your WordPress "
+"website by using Telegram Comments Widget."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:20
+msgid "INSTRUCTIONS!"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:23
+msgid "Goto %s"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:26
+msgid "Under %1$s click on %2$s or %3$s."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:29
+msgid "Enter your site name in %1$s field and %2$s in %3$s field."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:32
+msgid "Click on %s and customize the appearance if you want."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:35
+msgid "Click on %1$s and %2$s."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:38
+msgid "Paste the copied code in the field below."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:42
+msgid "Save Changes"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:45
+msgid "Use Telegram Comments widget for your WordPress posts or pages."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:48
+msgid "Do you like %s?"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:51
+msgid "Need help?"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:54
+msgid "Get LIVE support on Telegram"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:57
+msgid "Follow %s"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:60
+msgid "Join %s"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:63
+msgid "Changes saved successfully."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:66
+msgid "Lets fix these errors fist."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:69
+msgid "Invalid %s"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:72
+msgid "%s required."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:75
+msgid "Changes could not be saved."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:78
+msgid "Code"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:81
+msgid "Exclude"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:84
+msgid "Post types"
+msgstr ""
