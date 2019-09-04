@@ -1,0 +1,9 @@
+export { default as CheckOutline } from '@ant-design/icons/lib/outline/CheckOutline';
+export { default as CheckCircleFill } from '@ant-design/icons/lib/fill/CheckCircleFill';
+export { default as CloseOutline } from '@ant-design/icons/lib/outline/CloseOutline';
+export { default as CloseCircleFill } from '@ant-design/icons/lib/fill/CloseCircleFill';
+export { default as DownOutline } from '@ant-design/icons/lib/outline/DownOutline';
+export { default as ExclamationCircleFill } from '@ant-design/icons/lib/fill/ExclamationCircleFill';
+export { default as InboxOutline } from '@ant-design/icons/lib/outline/InboxOutline';
+export { default as PlusOutline } from '@ant-design/icons/lib/outline/PlusOutline';
+export { default as SaveOutline } from '@ant-design/icons/lib/outline/SaveOutline';

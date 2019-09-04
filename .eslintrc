@@ -1,0 +1,40 @@
+{
+	"rules": {
+		"curly": "warn",
+		"no-mixed-spaces-and-tabs": "warn",
+		"indent": ["error", "tab", {
+			"SwitchCase": 1,
+		}],
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"linebreak-style": ["error", "unix"],
+		"camelcase": "off",
+		"no-console": "off",
+		"no-alert": "off",
+		"@wordpress/no-unused-vars-before-return": "error",
+	},
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"allowImportExportEverywhere": true,
+		"codeFrame": true,
+		"ecmaFeatures": {
+			"templateStrings": true,
+		},
+		"ecmaVersion": 2018,
+	},
+	"extends": [
+		"plugin:@wordpress/eslint-plugin/recommended",
+	],
+	"plugins": ["eslint-plugin-react"],
+	"globals": {
+		"wptelegram_pro": "readonly",
+        "jQuery": "readonly"
+	}
+}

@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/admin/settings/FormRenderer.js:39
+msgid "Configuration"
+msgstr ""
+
+#: src/admin/settings/FormRenderer.js:44
+msgid "Please read the instructions above."
+msgstr ""
+
+#: src/admin/settings/FormRenderer.js:83
+msgid "The comments widget will be shown on the selected post types."
+msgstr ""
+
+#: src/admin/settings/FormRenderer.js:92
+msgid ""
+"To exclude the specific posts, enter the post or page IDs separated by "
+"comma."
+msgstr ""
+
+#: src/admin/settings/components/Header.js:60
+msgid ""
+"With this plugin, you can add comments to posts/pages on your WordPress "
+"website by using Telegram Comments Widget."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:15
+msgid "INSTRUCTIONS!"
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:27
+msgid "Goto %s"
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:28
+msgid "Under %1$s click on %2$s or %3$s."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:29
+msgid "Enter your site name in %1$s field and %2$s in %3$s field."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:30
+msgid "Click on %s and customize the appearance if you want."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:31
+msgid "Click on %1$s and %2$s."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:32
+msgid "Paste the copied code in the field below."
+msgstr ""
+
+#: src/admin/settings/components/Instructions.js:33
+#: src/admin/settings/components/SubmitInfo.js:127
+msgid "Save Changes"
+msgstr ""
+
+#: src/admin/settings/components/PluginInfoCard.js:21
+msgid "Use Telegram Comments widget for your WordPress posts or pages."
+msgstr ""
+
+#: src/admin/settings/components/PluginInfoCard.js:24
+msgid "Do you like %s?"
+msgstr ""
+
+#: src/admin/settings/components/PluginInfoCard.js:31
+msgid "Need help?"
+msgstr ""
+
+#: src/admin/settings/components/PluginInfoCard.js:32
+msgid "Get LIVE support on Telegram"
+msgstr ""
+
+#: src/admin/settings/components/SocialIcons.js:22
+msgid "Follow %s"
+msgstr ""
+
+#: src/admin/settings/components/SocialIcons.js:39
+msgid "Join %s"
+msgstr ""
+
+#: src/admin/settings/components/SubmitInfo.js:115
+msgid "Changes saved successfully."
+msgstr ""
+
+#: src/admin/settings/components/SubmitInfo.js:92
+msgid "Lets fix these errors fist."
+msgstr ""
+
+#: src/admin/settings/fields.js:28
+msgid "Invalid %s"
+msgstr ""
+
+#: src/admin/settings/fields.js:31
+msgid "%s required."
+msgstr ""
+
+#: src/admin/settings/fields.js:35
+msgid "Changes could not be saved."
+msgstr ""
+
+#: src/admin/settings/fields.js:42
+msgid "Code"
+msgstr ""
+
+#: src/admin/settings/fields.js:43
+msgid "Exclude"
+msgstr ""
+
+#: src/admin/settings/fields.js:44
+msgid "Post types"
+msgstr ""
