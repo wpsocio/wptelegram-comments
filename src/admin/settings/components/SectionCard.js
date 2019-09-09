@@ -2,18 +2,39 @@
  * External dependencies
  */
 import React from 'react';
-import { Card } from 'antd';
+import { Box } from '@chakra-ui/core';
 
-export default React.memo( ( { children, ...rest } ) => {
+export default ( props ) => {
+	const {
+		children,
+		title,
+		headStyle,
+		bodyStyle,
+		...rest
+	} = props;
 	return (
-		<Card
-			size="small"
-			type="inner"
-			style={ { marginBottom: 10 } }
-			headStyle={ { backgroundColor: '#eaeaea' } }
+		<Box
+			border="1px"
+			roundedTop="md"
+			borderColor="gray.200"
+			overflow="hidden"
+			mb={ 10 }
 			{ ...rest }
 		>
-			{ children }
-		</Card>
+			<Box
+				px={ 12 }
+				py={ 8 }
+				style={ { backgroundColor: '#eaeaea', ...headStyle } }
+			>
+				{ title }
+			</Box>
+			<Box
+				px={ 24 }
+				py={ 16 }
+				style={ bodyStyle }
+			>
+				{ children }
+			</Box>
+		</Box>
 	);
-} );
+};

@@ -12,6 +12,7 @@ project.properties
 .sublimelinterrc
 
 build/
+svn/
 node_modules/
 temp/
 none

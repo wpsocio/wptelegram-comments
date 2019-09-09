@@ -9,14 +9,45 @@ import lineec from 'gulp-line-ending-corrector';
 import notify from 'gulp-notify';
 import { exec } from 'child_process';
 import wpi18n from 'node-wp-i18n';
+import potomo from 'gulp-potomo';
 import path from 'path';
+import isBinary from 'gulp-is-binary';
+import gulpif from 'gulp-if';
+import gulpIgnore from 'gulp-ignore';
+import through2 from 'through2';
+import fs from 'fs';
+import debug from 'gulp-debug';
 
+const pkg = JSON.parse( fs.readFileSync( './package.json', 'utf8' ) );
+
+const getCommandArgs = () => {
+	const argList = process.argv;
+
+	const arg = {};
+	let a, opt, thisOpt, curOpt;
+	for ( a = 0; a < argList.length; a++ ) {
+		thisOpt = argList[ a ].trim();
+		opt = thisOpt.replace( /^\-+/, '' );
+
+		if ( opt === thisOpt ) {
+			// argument value
+			if ( curOpt ) {
+				arg[ curOpt ] = opt;
+			}
+			curOpt = null;
+		} else {
+			// argument name
+			curOpt = opt;
+			arg[ curOpt ] = true;
+		}
+	}
+	return arg;
+};
 /**
  * Internal dependencies
  */
 import webpackConfig from './webpack.config.babel';
 import config from './gulp.config';
-import pkg from './package.json';
 
 export const createTastCopy = ( { toCopy, toIgnore: ignore }, watching = false ) => () => {
 	let message = '\n\n✅  ===> COPY — completed!\n';
@@ -25,9 +56,16 @@ export const createTastCopy = ( { toCopy, toIgnore: ignore }, watching = false )
 	}
 
 	return gulp.src( toCopy, { cwd: config.srcDir, base: config.srcDir, ignore } )
-		.pipe( lineec() )
+		.pipe( isBinary() )
+		// Do not corrupt binary files.
+		.pipe( gulpif( ( file ) => ! file.isBinary(), lineec() ) )
 		.pipe( gulp.dest( config.buildDir ) )
 		.pipe( notify( { message, onLast: true } ) );
+};
+const copyChangelog = () => {
+	return gulp.src( './changelog.md', { base: './' } )
+		.pipe( lineec() )
+		.pipe( gulp.dest( config.buildDir ) );
 };
 
 const filesToGulp = {
@@ -115,6 +153,7 @@ export const translate = ( done ) => {
 			language: 'en_US',
 			'X-Poedit-Basepath': '..\n',
 			'Plural-Forms': 'nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n',
+			'x-generator': 'node-wp-i18n',
 			'X-Poedit-KeywordsList': '__;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n',
 			'X-Poedit-SearchPath-0': '.\n',
 		},
@@ -157,6 +196,131 @@ export const translate = ( done ) => {
 		.finally( done );
 };
 
+export const generateMoFiles = () => {
+	return gulp.src( [ '*.po' ], { cwd: config.domainPath } )
+		.pipe( potomo( { verbose: false } ) )
+		.pipe( gulp.dest( config.domainPath ) );
+};
+
+const createVersionUpdateCB = ( forFile, version ) => {
+	let patterns;
+	const replaceCB = ( match, p1 ) => match.replace( p1, version );
+
+	switch ( forFile ) {
+		case 'package':
+			// replace only the first occurence
+			patterns = [ /"version":\s*"(\d+\.\d+\.\d+)"/i ];
+			break;
+		case 'readme':
+			patterns = [ /Stable tag:(?:\*\*)?[\s\t]*(\d+\.\d+\.\d+)/i ];
+			break;
+		case 'mainfile':
+			// convert "plugin-name" to "PLUGIN_NAME_VER"
+			const versionConst = pkg.name.replace( '-', '_' ).toUpperCase() + '_VER';
+			patterns = [ /Version:\s*(\d+\.\d+\.\d+)/i, new RegExp( '\'' + versionConst + '\',\\s*\'(\\d+\\.\\d+\\.\\d+)\'' ) ];
+			break;
+		case 'since-xyz':
+			patterns = [ /@since[\s\t]*(x\.y\.z)/ig ];
+			break;
+
+		default:
+			break;
+	}
+	return through2.obj( function( file, _, cb ) {
+		if ( file.isBuffer() ) {
+			let contents = file.contents.toString();
+			patterns.forEach( ( regex ) => {
+				contents = contents.replace( regex, replaceCB );
+			} );
+			file.contents = Buffer.from( contents );
+		}
+		cb( null, file );
+	} );
+};
+
+export const updateVersion = ( done ) => {
+	const { to: version } = getCommandArgs();
+	if ( ! version ) {
+		done( new Error( 'No version number supplied! usage: gulp updateVersion --to "x.y.z"' ) );
+	}
+
+	const srcOptions = { base: './' };
+
+	return gulp.src( [ './package.json', './package-lock.json' ], srcOptions )
+		.pipe( createVersionUpdateCB( 'package', version ) )
+		.pipe( gulp.dest( './' ) )
+		// remove all files from the stream
+		.pipe( gulpIgnore.exclude( '**/*' ) )
+		// add readme files
+		.pipe( gulp.src( [ './README.md', config.srcDir + '/README.txt' ], srcOptions ) )
+		.pipe( createVersionUpdateCB( 'readme', version ) )
+		.pipe( gulp.dest( './' ) )
+		// remove all files from the stream
+		.pipe( gulpIgnore.exclude( '**/*' ) )
+		// add main file
+		.pipe( gulp.src( `${ config.srcDir }/${ pkg.name }.php`, srcOptions ) )
+		.pipe( createVersionUpdateCB( 'mainfile', version ) )
+		.pipe( gulp.dest( './' ) )
+		// remove all files from the stream
+		.pipe( gulpIgnore.exclude( '**/*' ) )
+		// add all php files
+		.pipe( gulp.src( `${ config.srcDir }/**/*.php`, srcOptions ) )
+		.pipe( createVersionUpdateCB( 'since-xyz', version ) )
+		.pipe( gulp.dest( './' ) );
+};
+
+export const updateChangelog = ( done ) => {
+	const { to: version } = getCommandArgs();
+	if ( ! version ) {
+		done( new Error( 'No version number supplied! usage: gulp updateChangelog --to "x.y.z"' ) );
+	}
+
+	const srcOptions = { cwd: './', base: './' };
+
+	return gulp.src( config.srcDir + '/README.txt', srcOptions )
+		.pipe( through2.obj( function( file, _, cb ) {
+			if ( file.isBuffer() ) {
+				const regex = /== Changelog ==([\s\S])/i;
+				const contents = file.contents.toString().replace( regex, ( match, p1 ) => {
+					const changes = fs.readFileSync( './changelog.md', 'utf8' ) // get contents of changelog file
+						.match( /(?<=\#\#\sUnreleased)[\s\S]+?(?=##\s?\[\d+\.\d+\.\d+)/i )[ 0 ] // match the changes in Unreleased section
+						.replace( /(^|\n)(\#\#.+)/g, '' ) // remove headings like Enhancements, Bug fixes
+						.replace( /\n[\s\t]*\n/g, '\n' ) // replace empty lines
+						.trim(); // cleanup
+
+					const replace = `\n\n= ${ version } =\n${ changes }\n`;
+					return match.replace( p1, replace );
+				} );
+				file.contents = Buffer.from( contents );
+			}
+			cb( null, file );
+		} ) )
+		.pipe( gulp.dest( './' ) )
+		// remove all files from the stream
+		.pipe( gulpIgnore.exclude( '**/*' ) )
+		// add all php files
+		.pipe( gulp.src( 'changelog.md', srcOptions ) )
+		.pipe( through2.obj( function( file, _, cb ) {
+			if ( file.isBuffer() ) {
+				const regex = /## (Unreleased)/i;
+				const contents = file.contents.toString().replace( regex, ( match, p1 ) => {
+					const today = new Date();
+					const replace = `[${ version } - ${ today.getFullYear() }-${ ( '0' + ( today.getMonth() + 1 ) ).slice( -2 ) }-${ today.getDate() }](https://github.com/manzoorwanijk/${ pkg.name }/releases/tag/v${ version })`;
+					return match.replace( p1, replace );
+				} );
+				file.contents = Buffer.from( contents );
+			}
+			cb( null, file );
+		} ) )
+		.pipe( gulp.dest( './' ) );
+};
+
+export const i18n = gulp.series(
+	jsPotToPhp,
+	translate,
+	generateMoFiles,
+);
+
 export const dev = gulp.parallel(
 	gulp.series(
 		clean,
@@ -167,8 +331,18 @@ export const dev = gulp.parallel(
 
 export const build = gulp.series(
 	clean,
-	jsPotToPhp,
-	translate,
-	copy,
-	webpack
+	webpack,
+	i18n,
+	copy
+);
+
+export const prerelease = gulp.parallel(
+	build,
+	copyChangelog
+);
+
+export const precommit = gulp.series(
+	updateVersion,
+	updateChangelog,
+	prerelease
 );

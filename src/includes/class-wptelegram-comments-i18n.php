@@ -35,7 +35,7 @@ class WPTelegram_Comments_I18n {
 		load_plugin_textdomain(
 			'wptelegram-comments',
 			false,
-			basename( WPTG_Comments()->dir() ) . '/languages/'
+			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
 
 	}

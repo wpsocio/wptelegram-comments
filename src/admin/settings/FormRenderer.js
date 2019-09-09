@@ -1,8 +1,7 @@
 /**
  * External dependencies
  */
-import React, { lazy, Suspense } from 'react';
-import { Form } from 'antd';
+import React from 'react';
 import { settings } from 'plugin-data';
 import $ from 'jquery';
 /**
@@ -12,28 +11,22 @@ import { __ } from './i18n';
 import FormField from './components/FormField';
 import { getFieldLabel } from './fields';
 import SectionCard from './components/SectionCard';
-import Loader from './components/Loader';
+import SubmitInfo from './components/SubmitInfo';
 
 const { view_opts: { post_types } } = settings;
-
-const SubmitInfo = lazy( () => import( /* webpackChunkName: "submit-info" */ './components/SubmitInfo' ) );
 
 export default ( props ) => {
 	const { handleSubmit, form: { mutators: { updateFieldValue } } } = props;
 
 	return (
-		<Form
-			labelCol={ { span: 5 } }
-			wrapperCol={ { span: 14 } }
-			labelAlign="left"
-			colon={ false }
+		<form
 			onSubmit={ handleSubmit }
-			onKeyPress={ ( e ) => {
-				/* If Enter is pressed */
+			/* onKeyPress={ ( e ) => {
+				// If Enter is pressed
 				if ( 13 === e.which && 'TEXTAREA' !== e.nativeEvent.target.nodeName ) {
 					e.preventDefault();
 				}
-			} }
+			} } */
 		>
 
 			<SectionCard title={ __( 'Configuration' ) }>
@@ -57,6 +50,7 @@ export default ( props ) => {
 						return value;
 					} }
 					controlProps={ {
+						id: 'code',
 						rows: 3,
 						cols: 60,
 						style: {
@@ -83,6 +77,12 @@ export default ( props ) => {
 					desc={ __( 'The comments widget will be shown on the selected post types.' ) }
 					label={ getFieldLabel( 'post_types' ) }
 					options={ post_types }
+					controlProps={ {
+						id: 'post_types',
+						isInline: true,
+						spacing: 8,
+						color: 'teal',
+					} }
 				/>
 
 				<FormField
@@ -90,7 +90,9 @@ export default ( props ) => {
 					htmlType="textarea"
 					label={ getFieldLabel( 'exclude' ) }
 					desc={ __( 'To exclude the specific posts, enter the post or page IDs separated by comma.' ) }
+					noBottomBorder
 					controlProps={ {
+						id: 'exclude',
 						rows: 4,
 						cols: 60,
 						spellCheck: 'false',
@@ -98,9 +100,8 @@ export default ( props ) => {
 					} }
 				/>
 			</SectionCard>
-			<Suspense fallback={ <Loader /> }>
-				<SubmitInfo />
-			</Suspense>
-		</Form>
+
+			<SubmitInfo />
+		</form>
 	);
 };

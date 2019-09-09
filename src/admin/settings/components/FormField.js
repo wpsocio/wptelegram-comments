@@ -2,15 +2,19 @@
  * External dependencies
  */
 import React from 'react';
-import { Form } from 'antd';
+import {
+	Box,
+	FormControl,
+	FormLabel,
+	FormErrorMessage,
+	FormHelperText,
+} from '@chakra-ui/core';
 import { Field } from 'react-final-form';
 /**
  * Internal dependencies
  */
-import { MappedField } from './antd-mapped';
+import { MappedField } from './mapped-fields';
 import { formatValue } from '../fields';
-
-const FormItem = Form.Item;
 
 export default React.memo( ( props ) => {
 	const { name, ...rest } = props;
@@ -18,7 +22,7 @@ export default React.memo( ( props ) => {
 		<Field
 			name={ name }
 			key={ name }
-			component={ WrappedField }
+			render={ RenderField }
 			format={ formatValue }
 			formatOnBlur={ true }
 			{ ...rest }
@@ -26,62 +30,48 @@ export default React.memo( ( props ) => {
 	);
 } );
 
+const RenderField = ( props ) => {
+	const { meta: { touched, error, submitError }, controlProps } = props;
+	const errorMessage = touched && ( error || submitError );
+	return (
+		<WrappedField { ...{ ...props, errorMessage } }>
+			<MappedField { ...props } controlProps={ { ...controlProps, isInvalid: Boolean( errorMessage ) } } />
+		</WrappedField>
+	);
+};
+
 const WrappedField = ( props ) => {
 	const {
 		label,
 		desc,
-		meta,
 		before,
 		after,
-		htmlType,
-		component: Component = MappedField,
+		controlProps,
+		children,
+		errorMessage,
+		noBottomBorder,
 	} = props;
-
-	const colProps = getColProps( props );
-
-	const validateStatus = getValidateStatus( meta );
 	return (
-		<FormItem
-			label={ label }
-			extra={ desc }
-			validateStatus={ validateStatus }
-			hasFeedback={ meta.touched && Boolean( meta.error || meta.submitError ) }
-			help={ meta.touched && ( meta.error || meta.submitError ) }
-			{ ...colProps }
-			className={ `form-item form-item-${ htmlType }` }
+		<FormControl
+			display={ { lg: 'flex' } }
+			justifyContent="space-between"
+			py={ 20 }
+			borderBottom={ noBottomBorder ? 0 : '1px' }
+			borderColor="gray.200"
+			isInvalid={ Boolean( errorMessage ) }
 		>
-			{ before && before( props ) }
-			<Component { ...props } />
-			{ after && after( props ) }
-		</FormItem>
+			<Box width="30%">
+				<FormLabel htmlFor={ controlProps.id ? controlProps.id : null }>
+					{ label || null }
+				</FormLabel>
+			</Box>
+			<Box width="70%">
+				{ before }
+				{ children }
+				<FormErrorMessage>{ errorMessage }</FormErrorMessage>
+				{ desc ? <FormHelperText>{ desc }</FormHelperText> : null }
+				{ after }
+			</Box>
+		</FormControl>
 	);
-};
-
-const getColProps = ( props ) => {
-	const { labelCol, wrapperCol } = props;
-	const colProps = {};
-	// Avoid passing labelCol && wrapperCol when undefined.
-	// to main tain the parent form layout.
-	if ( labelCol ) {
-		colProps.labelCol = labelCol;
-	}
-	if ( wrapperCol ) {
-		colProps.wrapperCol = wrapperCol;
-	}
-	return colProps;
-};
-
-const getValidateStatus = ( meta ) => {
-	if ( meta.touched ) {
-		if ( ! ( meta.error || meta.submitError ) ) {
-			return 'success';
-		}
-		if ( meta.submitError ) {
-			return 'error';
-		}
-		if ( meta.error ) {
-			return 'error'; //'warning';
-		}
-	}
-	return '';
 };

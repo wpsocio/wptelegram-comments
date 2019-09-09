@@ -2,12 +2,12 @@
  * External dependencies
  */
 import React from 'react';
-import { Spin } from 'antd';
+import { Spinner } from '@chakra-ui/core';
 
 export default () => {
 	return (
 		<div style={ { display: 'flex', justifyContent: 'center' } }>
-			<Spin />
+			<Spinner />
 		</div>
 	);
 };

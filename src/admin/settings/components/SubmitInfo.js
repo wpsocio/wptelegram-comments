@@ -2,13 +2,16 @@
  * External dependencies
  */
 import React, { useState } from 'react';
+
 import {
-	Affix,
+	Box,
+	Flex,
 	Alert,
-	Button,
-	Col,
-	Row,
-} from 'antd';
+	AlertIcon,
+	AlertTitle,
+	CloseButton,
+	IconButton,
+} from '@chakra-ui/core';
 import { FormSpy } from 'react-final-form';
 import { FORM_ERROR } from 'final-form';
 /**
@@ -17,14 +20,13 @@ import { FORM_ERROR } from 'final-form';
 import { __ } from '../i18n';
 import { getErrorStrings } from '../utils/FormUtils';
 
-export default () => {
+export default React.memo( () => {
 	const [ closedValidionAlert, setClosedValidionAlert ] = useState( false );
 	const [ closedSubmitAlert, setClosedSubmitAlert ] = useState( false );
 	const [ closedSuccessAlert, setClosedSuccessAlert ] = useState( false );
 	return (
-		<Affix className="submit-wrap" >
+		<Box className="submit-wrap" >
 			<FormSpy subscription={ {
-				// active: true,
 				submitting: true,
 				pristine: true,
 				errors: true,
@@ -51,33 +53,30 @@ export default () => {
 					const submitErrorStrings = getErrorStrings( submitErrors );
 
 					return (
-						<Row
-							gutter={ 10 }
-							type="flex"
+						<Flex
 							justify="end"
 							align="bottom"
-							style={ { flexFlow: 'row' } }
+							flexFlow="row"
 						>
-							<Col style={ { maxWidth: 400 } }>
+							<Flex
+								maxW={ 400 }
+								px={ 10 }
+								direction="column"
+								justify="center"
+							>
 								{ submitFailed && hasSubmitErrors && ! closedSubmitAlert && submitErrorStrings.length && (
 									<>
-										<Alert
-											closable
-											showIcon
-											type="warning"
-											message={ submitError }
-											onClose={ () => setClosedSubmitAlert( true ) }
-										/>
+										<Alert status="warning">
+											<AlertIcon size={ 3 } />
+											<AlertTitle mr={ 2 }>{ submitError }</AlertTitle>
+											<CloseIcon onClick={ () => setClosedSubmitAlert( true ) } />
+										</Alert>
 										{ submitErrorStrings.map( ( str, i ) => {
 											return (
-												<Alert
-													key={ i + str }
-													// closable
-													showIcon
-													type="error"
-													message={ str }
-													style={ { marginTop: '5px' } }
-												/>
+												<Alert mt={ 5 } status="error" key={ i + str }>
+													<AlertIcon size={ 3 } />
+													<AlertTitle mr={ 2 }>{ str }</AlertTitle>
+												</Alert>
 											);
 										} ) }
 									</>
@@ -85,58 +84,60 @@ export default () => {
 
 								{ submitFailed && hasValidationErrors && ! closedValidionAlert && validationErrorStrings.length && (
 									<>
-										<Alert
-											closable
-											showIcon
-											type="warning"
-											message={ __( 'Lets fix these errors fist.' ) }
-											onClose={ () => setClosedValidionAlert( true ) }
-										/>
+										<Alert status="warning">
+											<AlertIcon size={ 3 } />
+											<AlertTitle>{ __( 'Lets fix these errors first.' ) }</AlertTitle>
+											<CloseIcon onClick={ () => setClosedValidionAlert( true ) } />
+										</Alert>
 										{ validationErrorStrings.map( ( str, i ) => {
 											return (
-												<Alert
-													key={ i + str }
-													// closable
-													showIcon
-													type="error"
-													message={ str }
-													style={ { marginTop: '5px' } }
-												/>
+												<Alert mt={ 5 } status="error" key={ i + str }>
+													<AlertIcon size={ 3 } />
+													<AlertTitle mr={ 2 }>{ str }</AlertTitle>
+												</Alert>
 											);
 										} ) }
 									</>
 								) }
 
 								{ pristine && submitSucceeded && ! closedSuccessAlert && (
-									<Alert
-										closable
-										showIcon
-										type="success"
-										message={ __( 'Changes saved successfully.' ) }
-										onClose={ () => setClosedSuccessAlert( true ) }
-									/>
+									<Alert status="success">
+										<AlertIcon size={ 3 } />
+										<AlertTitle mr={ 2 }>{ __( 'Changes saved successfully.' ) }</AlertTitle>
+										<CloseIcon onClick={ () => setClosedSuccessAlert( true ) } />
+									</Alert>
 								) }
-							</Col>
-							<Col>
-								<Button
+							</Flex>
+							<Box>
+								<IconButton
+									isRound
+									size="lg"
+									w="5rem"
+									h="5rem"
+									fontSize="3rem"
+									bg="white"
+									variantColor="gray"
+									variant="outline"
+									cursor="pointer"
+									aria-label="Save Changes"
 									icon="save"
-									shape="circle-outline"
-									size="large"
-									htmlType="submit"
-									disabled={ submitting }
-									title={ __( 'Save Changes' ) }
-									className="submit-button"
+									type="submit"
+									// disabled={ submitting }
+									isLoading={ submitting }
 									onClick={ () => {
 										setClosedValidionAlert( false );
 										setClosedSubmitAlert( false );
 										setClosedSuccessAlert( false );
 									} }
+									title={ __( 'Save Changes' ) }
 								/>
-							</Col>
-						</Row>
+							</Box>
+						</Flex>
 					);
 				} }
 			</FormSpy>
-		</Affix>
+		</Box>
 	);
-};
+} );
+
+const CloseIcon = ( props ) => <CloseButton cursor="pointer" bg="transparent" border="none" variant="ghost" size="sm" { ...props } />;

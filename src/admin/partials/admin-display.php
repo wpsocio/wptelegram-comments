@@ -10,6 +10,7 @@
  * @package    WPTelegram_Comments
  * @subpackage WPTelegram_Comments/admin/partials
  */
+
 defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 ?>
 

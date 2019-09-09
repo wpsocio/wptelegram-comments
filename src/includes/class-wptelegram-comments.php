@@ -123,9 +123,7 @@ class WPTelegram_Comments {
 	 */
 	public function __construct() {
 
-		$this->version = WPTELEGRAM_COMMENTS_VERSION;
-
-		$this->title = __( 'WP Telegram Comments', 'wptelegram-comments' );
+		$this->version = WPTELEGRAM_COMMENTS_VER;
 
 		$this->plugin_name = strtolower( __CLASS__ );
 
@@ -304,6 +302,11 @@ class WPTelegram_Comments {
 	 * @return    string    The title of the plugin.
 	 */
 	public function title() {
+		// Set here instead of constructor
+		// to be able to translate it.
+		if ( ! $this->title ) {
+			$this->title = __( 'WP Telegram Comments', 'wptelegram-comments' );
+		}
 		return $this->title;
 	}
 

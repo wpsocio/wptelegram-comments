@@ -6,7 +6,6 @@ import { api } from 'plugin-data';
 /**
  * Internal dependencies
  */
-import { __ } from '../i18n';
 const { rest } = api;
 
 export const sendAjaxRequest = ( options ) => {

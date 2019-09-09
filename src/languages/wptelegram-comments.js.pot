@@ -3,15 +3,15 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/admin/settings/FormRenderer.js:39
+#: src/admin/settings/FormRenderer.js:32
 msgid "Configuration"
 msgstr ""
 
-#: src/admin/settings/FormRenderer.js:44
+#: src/admin/settings/FormRenderer.js:37
 msgid "Please read the instructions above."
 msgstr ""
 
-#: src/admin/settings/FormRenderer.js:83
+#: src/admin/settings/FormRenderer.js:77
 msgid "The comments widget will be shown on the selected post types."
 msgstr ""
 
@@ -21,7 +21,7 @@ msgid ""
 "comma."
 msgstr ""
 
-#: src/admin/settings/components/Header.js:60
+#: src/admin/settings/components/Header.js:54
 msgid ""
 "With this plugin, you can add comments to posts/pages on your WordPress "
 "website by using Telegram Comments Widget."
@@ -31,65 +31,65 @@ msgstr ""
 msgid "INSTRUCTIONS!"
 msgstr ""
 
-#: src/admin/settings/components/Instructions.js:27
+#: src/admin/settings/components/Instructions.js:22
 msgid "Goto %s"
 msgstr ""
 
-#: src/admin/settings/components/Instructions.js:28
+#: src/admin/settings/components/Instructions.js:23
 msgid "Under %1$s click on %2$s or %3$s."
 msgstr ""
 
-#: src/admin/settings/components/Instructions.js:29
+#: src/admin/settings/components/Instructions.js:24
 msgid "Enter your site name in %1$s field and %2$s in %3$s field."
 msgstr ""
 
-#: src/admin/settings/components/Instructions.js:30
+#: src/admin/settings/components/Instructions.js:25
 msgid "Click on %s and customize the appearance if you want."
 msgstr ""
 
-#: src/admin/settings/components/Instructions.js:31
+#: src/admin/settings/components/Instructions.js:26
 msgid "Click on %1$s and %2$s."
 msgstr ""
 
-#: src/admin/settings/components/Instructions.js:32
+#: src/admin/settings/components/Instructions.js:27
 msgid "Paste the copied code in the field below."
 msgstr ""
 
-#: src/admin/settings/components/Instructions.js:33
-#: src/admin/settings/components/SubmitInfo.js:127
+#: src/admin/settings/components/Instructions.js:28
+#: src/admin/settings/components/SubmitInfo.js:132
 msgid "Save Changes"
 msgstr ""
 
-#: src/admin/settings/components/PluginInfoCard.js:21
+#: src/admin/settings/components/PluginInfoCard.js:46
 msgid "Use Telegram Comments widget for your WordPress posts or pages."
 msgstr ""
 
-#: src/admin/settings/components/PluginInfoCard.js:24
+#: src/admin/settings/components/PluginInfoCard.js:52
 msgid "Do you like %s?"
 msgstr ""
 
-#: src/admin/settings/components/PluginInfoCard.js:31
+#: src/admin/settings/components/PluginInfoCard.js:81
 msgid "Need help?"
 msgstr ""
 
-#: src/admin/settings/components/PluginInfoCard.js:32
+#: src/admin/settings/components/PluginInfoCard.js:86
 msgid "Get LIVE support on Telegram"
 msgstr ""
 
-#: src/admin/settings/components/SocialIcons.js:22
+#: src/admin/settings/components/SocialIcons.js:28
 msgid "Follow %s"
 msgstr ""
 
-#: src/admin/settings/components/SocialIcons.js:39
+#: src/admin/settings/components/SocialIcons.js:49
 msgid "Join %s"
 msgstr ""
 
-#: src/admin/settings/components/SubmitInfo.js:115
+#: src/admin/settings/components/SubmitInfo.js:106
 msgid "Changes saved successfully."
 msgstr ""
 
-#: src/admin/settings/components/SubmitInfo.js:92
-msgid "Lets fix these errors fist."
+#: src/admin/settings/components/SubmitInfo.js:89
+msgid "Lets fix these errors first."
 msgstr ""
 
 #: src/admin/settings/fields.js:28

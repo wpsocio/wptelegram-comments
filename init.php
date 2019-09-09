@@ -23,6 +23,10 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+if ( ! defined( 'WPTELEGRAM_DEV' ) ) {
+	define( 'WPTELEGRAM_DEV', true );
+}
+
 $mainfile = plugin_dir_path( __FILE__ ) . 'build/wptelegram-comments.php';
 
 if ( file_exists( $mainfile ) ) {

@@ -2,7 +2,6 @@
  * External dependencies
  */
 import { settings, api } from 'plugin-data';
-import { setIn } from 'final-form';
 /**
  * Internal dependencies
  */
@@ -20,37 +19,8 @@ export const fetchInitialValues = () => {
 	return sendAjaxRequest( options );
 };
 
-export const fetchRuleValues = ( params ) => {
-	const {
-		setInProgress,
-		setResult,
-		...data
-	} = params;
-
-	setInProgress( true );
-
-	const options = {
-		type: 'GET',
-		url: rest.url + '/rules',
-		data,
-		error: ( jqXHR ) => {
-			console.log( 'ERROR', jqXHR );
-
-			setResult( [] );
-		},
-		success: ( _data ) => {
-			setResult( _data );
-		},
-		complete: () => setInProgress( false ),
-	};
-
-	return sendAjaxRequest( options );
-};
-
 export const submitForm = async ( values, form ) => {
 	return await new Promise( ( resolve ) => {
-		console.log( values );
-		// return resolve( {} );
 		const options = {
 			url: rest.url + '/settings',
 			data: JSON.stringify( values ),
@@ -62,14 +32,9 @@ export const submitForm = async ( values, form ) => {
 
 				if ( code ) {
 					if ( 'rest_invalid_param' === code ) {
-						const { params = {} } = data;
-
-						for ( const key in params ) {
-							if ( params.hasOwnProperty( key ) ) {
-								const { message, param } = params[ key ];
-								Object.assign( errors, setIn( errors, param, message ) );
-							}
-						}
+						Object.keys( data.params ).forEach( ( key ) => {
+							errors[ key ] = getErrorMessage( key );
+						} );
 					} else if ( 'rest_missing_callback_param' === code ) {
 						data.params.forEach( ( key ) => {
 							errors[ key ] = getErrorMessage( key, 'required' );

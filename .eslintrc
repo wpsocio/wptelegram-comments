@@ -34,7 +34,6 @@
 	],
 	"plugins": ["eslint-plugin-react"],
 	"globals": {
-		"wptelegram_pro": "readonly",
         "jQuery": "readonly"
 	}
 }

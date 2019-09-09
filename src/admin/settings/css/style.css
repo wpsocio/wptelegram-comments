@@ -2,6 +2,9 @@
 #wpbody-content > *:not(#wptelegram-comments-settings) {
     display: none !important;
 }
+#wpcontent {
+    background-color: #fff;
+}
 .submit-wrap{
     position: fixed;
     right: 2em;
@@ -34,4 +37,10 @@
 
 .social-link.telegram > img {
     margin-right: 0.5em;
+}
+*::placeholder {
+    color: #ccc;
+}
+a {
+    text-decoration: none;
 }
