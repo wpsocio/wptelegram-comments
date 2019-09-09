@@ -1,144 +1,144 @@
-# Copyright (C) 2019
-# This file is distributed under the same license as the  package.
+# Copyright (C) 2019 WP Telegram
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: "
-"http://wordpress.org/support/plugin/wptelegram-comments\n"
-"POT-Creation-Date: 2019-09-09 20:46:51+00:00\n"
+"Project-Id-Version: WP Telegram Comments\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-comments\n"
+"POT-Creation-Date: 2019-09-05 09:48:21+00:00\n"
+"PO-Revision-Date: 2019-09-05 14:06+0530\n"
+"Last-Translator: \n"
+"Language-Team: WP Telegram\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-09-10 20:46+-330\n"
-"Last-Translator: WP Telegram Comments\n"
-"Language-Team: WP Telegram Comments\n"
-"Language: en_US\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n\n"
-"X-Poedit-Country: United States\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-Bookmarks: \n"
-"X-Textdomain-Support: yes\n"
-"X-Generator: node-wp-i18n\n"
+"X-Poedit-SearchPathExcluded-0: admin/settings\n"
 
 #: admin/class-wptelegram-comments-admin.php:245
 msgid "Telegram Comments"
-msgstr ""
+msgstr "Telegram Komentari"
 
 #: includes/class-wptelegram-comments.php:308
 msgid "WP Telegram Comments"
-msgstr ""
+msgstr "WP Telegram Komentari"
 
 #: languages/wptelegram-comments-js-translations.php:5
 msgid "Configuration"
-msgstr ""
+msgstr "Konfiguracija"
 
 #: languages/wptelegram-comments-js-translations.php:8
 msgid "Please read the instructions above."
-msgstr ""
+msgstr "Molim pročitajte upute iznad."
 
 #: languages/wptelegram-comments-js-translations.php:11
 msgid "The comments widget will be shown on the selected post types."
-msgstr ""
+msgstr "Comments widget biti će prikazan na odabranim tipovima postova."
 
 #: languages/wptelegram-comments-js-translations.php:14
 msgid ""
-"To exclude the specific posts, enter the post or page IDs separated by "
-"comma."
+"To exclude the specific posts, enter the post or page IDs separated by comma."
 msgstr ""
+"Kako bi isključili određene postove, unesite post ili page ID te ih odvojite "
+"zarezom."
 
 #: languages/wptelegram-comments-js-translations.php:17
 msgid ""
 "With this plugin, you can add comments to posts/pages on your WordPress "
 "website by using Telegram Comments Widget."
 msgstr ""
+"S ovim dodatkom, možete omogućiti komentare na vaše WordPress postove i "
+"stranice koristeći Telegram Comments Widget."
 
 #: languages/wptelegram-comments-js-translations.php:20
 msgid "INSTRUCTIONS!"
-msgstr ""
+msgstr "UPUTE!"
 
 #: languages/wptelegram-comments-js-translations.php:23
 msgid "Goto %s"
-msgstr ""
+msgstr "Idi na %s"
 
 #: languages/wptelegram-comments-js-translations.php:26
 msgid "Under %1$s click on %2$s or %3$s."
-msgstr ""
+msgstr "Ispod %1$s kliknite na %2$s ili %3$s."
 
 #: languages/wptelegram-comments-js-translations.php:29
 msgid "Enter your site name in %1$s field and %2$s in %3$s field."
-msgstr ""
+msgstr "Unesite naziv stranice u %1$s polje i %2$s u %3$s polje."
 
 #: languages/wptelegram-comments-js-translations.php:32
 msgid "Click on %s and customize the appearance if you want."
-msgstr ""
+msgstr "Kliknite na %s i prilagodite izgled ukoliko zelite."
 
 #: languages/wptelegram-comments-js-translations.php:35
 msgid "Click on %1$s and %2$s."
-msgstr ""
+msgstr "Kliknite na %1$s i %2$s."
 
 #: languages/wptelegram-comments-js-translations.php:38
 msgid "Paste the copied code in the field below."
-msgstr ""
+msgstr "Zaljepite kopirani kod u polje ispod."
 
 #: languages/wptelegram-comments-js-translations.php:42
 msgid "Save Changes"
-msgstr ""
+msgstr "Spremi promjene"
 
 #: languages/wptelegram-comments-js-translations.php:45
 msgid "Use Telegram Comments widget for your WordPress posts or pages."
 msgstr ""
+"Koristite Telegram Comments widget za vaše WordPress postove i stranice."
 
 #: languages/wptelegram-comments-js-translations.php:48
 msgid "Do you like %s?"
-msgstr ""
+msgstr "Sviđa ti se %s?"
 
 #: languages/wptelegram-comments-js-translations.php:51
 msgid "Need help?"
-msgstr ""
+msgstr "Trebate Pomoć?"
 
 #: languages/wptelegram-comments-js-translations.php:54
 msgid "Get LIVE support on Telegram"
-msgstr ""
+msgstr "Reference"
 
 #: languages/wptelegram-comments-js-translations.php:57
 msgid "Follow %s"
-msgstr ""
+msgstr "Prati %s"
 
 #: languages/wptelegram-comments-js-translations.php:60
 msgid "Join %s"
-msgstr ""
+msgstr "Pridruži se %s"
 
 #: languages/wptelegram-comments-js-translations.php:63
 msgid "Changes saved successfully."
-msgstr ""
+msgstr "Promjene su uspješno snimljene."
 
 #: languages/wptelegram-comments-js-translations.php:66
 msgid "Lets fix these errors first."
-msgstr ""
+msgstr "Idemo prvo popraviti greške."
 
 #: languages/wptelegram-comments-js-translations.php:69
 msgid "Invalid %s"
-msgstr ""
+msgstr "Neispravan %s"
 
 #: languages/wptelegram-comments-js-translations.php:72
 msgid "%s required."
-msgstr ""
+msgstr "%s potrebno."
 
 #: languages/wptelegram-comments-js-translations.php:75
 msgid "Changes could not be saved."
-msgstr ""
+msgstr "Promjene ne mogu biti spremljene."
 
 #: languages/wptelegram-comments-js-translations.php:78
 msgid "Code"
-msgstr ""
+msgstr "Kod"
 
 #: languages/wptelegram-comments-js-translations.php:81
 msgid "Exclude"
-msgstr ""
+msgstr "Izostavi"
 
 #: languages/wptelegram-comments-js-translations.php:84
 msgid "Post types"
-msgstr ""
+msgstr "Vrsta Objave"

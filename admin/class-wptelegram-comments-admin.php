@@ -56,7 +56,7 @@ class WPTelegram_Comments_Admin {
 			if ( file_exists( $this->plugin->dir( $style_path ) ) ) {
 
 				// Avoid caching for development.
-				$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? date( 'y.m.d-is', filemtime( $this->plugin->dir( $path ) ) ) : $this->plugin->version();
+				$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? date( 'y.m.d-is', filemtime( $this->plugin->dir( $style_path ) ) ) : $this->plugin->version();
 
 				wp_enqueue_style( $this->plugin->name() . '-main', $this->plugin->url( $style_path ), array(), $version, 'all' );
 			}
@@ -118,7 +118,7 @@ class WPTelegram_Comments_Admin {
 						'plugin_url' => $this->plugin->url(),
 						'post_types' => $this->get_post_type_options(),
 					),
-					'saved_opts' => current_user_can( 'manage_options' ) ? WPTelegram_Comments_Settings_Controller::get_default_settings() : array(), // Not to expose bot token to non-admins.
+					'saved_opts' => current_user_can( 'manage_options' ) ? WPTelegram_Comments_Settings_Controller::get_default_settings() : array(),
 					'assets'     => array(
 						'logo_url' => $this->plugin->url( '/admin/icons/icon-30x30.svg' ),
 						'tg_icon'  => $this->plugin->url( '/admin/icons/tg-icon.svg' ),
