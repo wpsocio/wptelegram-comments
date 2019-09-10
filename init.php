@@ -8,8 +8,8 @@
  * @wordpress-plugin
  * Plugin Name:       WP Telegram Comments Dev
  * Plugin URI:        https://t.me/WPTelegram
- * Description:       Development Environment for WP Telegram Comments
- * Version:           1.0.0
+ * Description:       Development Environment for WP Telegram Comments. Versioned high to avoid auto update.
+ * Version:           999.999.999
  * Author:            Manzoor Wani
  * Author URI:        https://t.me/manzoorwanijk
  * License:           GPL-2.0+
