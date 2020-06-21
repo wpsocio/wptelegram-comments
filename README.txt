@@ -3,9 +3,9 @@ Contributors: manzoorwanijk
 Donate link: https://paypal.me/manzoorwanijk
 Tags: telegram, comments, discuss, social, widget
 Requires at least: 4.7
-Tested up to: 5.2.3
+Tested up to: 5.4.2
 Requires PHP: 5.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,11 +31,12 @@ For rules, see the pinned message. No spam please.
 
 * ⚡️ Ultra lightweight comments widget
 * 🛒 Supports WooCommerce products and other Custom Post Types
-* 🎛 You can exclude specific posts/pages for comments
+* 🛂 You can exclude specific posts/pages for comments
 * 🔔 Users can subscribe to comments and get the notifications on Telegram
-* 👌 Comments can have Like 👍 and Dislike 👎 Feedback
+* 👏 Comments can have Like 👍 and Dislike 👎 Feedback
+* 📸 Comments support multimedia attachments
 * ⤴️ Users can reply to comments intuitively
-* 🗑 Comments can be edited or deleted anytime
+* ✏️ Comments can be edited or deleted anytime
 
 == Installation ==
 
@@ -50,6 +51,9 @@ For rules, see the pinned message. No spam please.
 1. Settings
 
 == Changelog ==
+
+= 1.0.2 =
+- Updated test up to
 
 = 1.0.1 =
 * Added translations
