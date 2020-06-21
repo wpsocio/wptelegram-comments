@@ -17,12 +17,12 @@ const config = {
 				pragma: 'el',
 			},
 		],
-		[
+		/* [
 			'@wordpress/babel-plugin-makepot',
 			{
 				output: 'src/languages/wptelegram-comments.js.pot',
 			},
-		],
+		], */
 		[
 			'import',
 			{
