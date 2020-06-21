@@ -10,12 +10,9 @@ import WebpackRTLPlugin from 'webpack-rtl-plugin';
  */
 import { createConfig } from './tools/webpack';
 
-const mainSettings = ( isDev ) => createConfig(
-	{
-		entry: [
-			'regenerator-runtime/runtime',
-			'./src/admin/settings/index.js',
-		],
+const mainSettings = ( isDev ) =>
+	createConfig( {
+		entry: [ 'regenerator-runtime/runtime', './src/admin/settings/index.js' ],
 		output: {
 			path: resolve( __dirname, 'build/admin/settings' ),
 			filename: 'main.js',
@@ -45,14 +42,11 @@ const mainSettings = ( isDev ) => createConfig(
 			} ),
 			new WebpackRTLPlugin(),
 		],
-	}
-);
+	} );
 
-const configs = ( env, argv ) => {
-	const isDev = argv && 'development' === argv.mode;
-	return [
-		mainSettings( isDev ),
-	];
+const configs = ( env, argv = {} ) => {
+	const isDev = 'development' === argv.mode;
+	return [ mainSettings( isDev ) ];
 };
 
 export default configs;

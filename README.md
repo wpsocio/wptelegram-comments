@@ -1,12 +1,12 @@
 # WP Telegram Comments
 
-**Contributors:**      [manzoorwanijk](https://github.com/manzoorwanijk)  
-**Tags:**              telegram, comments, discuss, social, widget  
+**Contributors:** [manzoorwanijk](https://github.com/manzoorwanijk)  
+**Tags:** telegram, comments, discuss, social, widget  
 **Requires at least:** 4.7  
-**Tested up to:**      5.2.3  
-**Stable tag:**        1.0.1  
-**License:**           GPLv2 or later  
-**License URI:**       [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)  
+**Tested up to:** 5.4.2  
+**Stable tag:** 1.0.1  
+**License:** GPLv2 or later  
+**License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
 [![Wordpress plugin](https://img.shields.io/wordpress/plugin/v/wptelegram-comments.svg)](https://wordpress.org/plugins/wptelegram-comments/)
 [![Wordpress](https://img.shields.io/wordpress/plugin/dt/wptelegram-comments.svg)](https://wordpress.org/plugins/wptelegram-comments/)
@@ -23,24 +23,27 @@ Comments on a WordPress post not only fills your database tables rather they als
 
 ## Why Telegram Comments?
 
-* ✅ It saves you database memory
-* ✅ Comments are from authenticated Telegram Users
-* ❌ No place for spam bots
+- ✅ It saves you database memory
+- ✅ Comments are from authenticated Telegram Users
+- ❌ No place for spam bots
 
 ## Features:
 
-* ⚡️ Ultra lightweight comments widget
-* 🛒 Supports WooCommerce products and other Custom Post Types
-* 🎛 You can exclude specific posts/pages for comments
-* 🔔 Users can subscribe to comments and get the notifications on Telegram
-* 👌 Comments can have Like 👍 and Dislike 👎 Feedback
-* ⤴️ Users can reply to comments intuitively
-* 🗑 Comments can be edited or deleted anytime
+- ⚡️ Ultra lightweight comments widget
+- 🛒 Supports WooCommerce products and other Custom Post Types
+- 🛂 You can exclude specific posts/pages for comments
+- 🔔 Users can subscribe to comments and get the notifications on Telegram
+- 👏 Comments can have Like 👍 and Dislike 👎 Feedback
+- 📸 Comments support multimedia attachments
+- ⤴️ Users can reply to comments intuitively
+- ✏️ Comments can be edited or deleted anytime
 
 ### Contribution
+
 Development occurs on Github, and all contributions welcome.
 
 ## Translation
+
 If you are looking to provide language translation files, Please do so via [WordPress Plugin Translations](https://translate.wordpress.org/projects/wp-plugins/wptelegram-comments).
 
 ## Installation
@@ -48,4 +51,3 @@ If you are looking to provide language translation files, Please do so via [Word
 1. Upload the `wptelegram-comments` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the Plugins menu in WordPress. After activation, you should see the menu of this plugin the the admin
 3. Configure the plugin.
-

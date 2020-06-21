@@ -18,7 +18,6 @@ export const MappedField = ( { htmlType, ...rest } ) => {
 		case 'multicheck':
 			Component = MultiCheckField;
 			break;
-
 		default:
 			Component = () => null;
 			break;
@@ -27,9 +26,9 @@ export const MappedField = ( { htmlType, ...rest } ) => {
 };
 
 export const TextAreaField = ( props ) => {
-	const { input, controlProps = {} } = props;
+	const { input, inputProps = {} } = props;
 	return (
-		<Textarea { ...input } { ...controlProps } />
+		<Textarea { ...input } { ...inputProps } />
 	);
 };
 
@@ -39,17 +38,17 @@ const MultiCheckField = ( props ) => {
 			value: defaultValue,
 			...restInput
 		},
-		controlProps,
+		inputProps = {},
 		options,
 	} = props;
 	return (
 		<CheckboxGroup
 			{ ...restInput }
-			{ ...controlProps }
+			{ ...inputProps }
 			defaultValue={ defaultValue }
 		>
 			{ options.map( ( { value, label } ) => {
-				return <Checkbox borderColor="gray.200" value={ value } key={ value }>{ label }</Checkbox>;
+				return <Checkbox borderColor="gray.200" value={ value } key={ value } mb={ inputProps.isInline ? 8: 0 }>{ label }</Checkbox>;
 			} ) }
 		</CheckboxGroup>
 	);

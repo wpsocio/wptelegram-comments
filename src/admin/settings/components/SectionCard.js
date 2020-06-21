@@ -18,6 +18,7 @@ export default ( props ) => {
 			roundedTop="md"
 			borderColor="gray.200"
 			overflow="hidden"
+			className="test-class"
 			mb={ 10 }
 			{ ...rest }
 		>
@@ -29,8 +30,8 @@ export default ( props ) => {
 				{ title }
 			</Box>
 			<Box
-				px={ 24 }
-				py={ 16 }
+				px={ 20 }
+				py={ 10 }
 				style={ bodyStyle }
 			>
 				{ children }

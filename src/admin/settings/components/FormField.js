@@ -31,11 +31,11 @@ export default React.memo( ( props ) => {
 } );
 
 const RenderField = ( props ) => {
-	const { meta: { touched, error, submitError }, controlProps } = props;
+	const { meta: { touched, error, submitError }, inputProps } = props;
 	const errorMessage = touched && ( error || submitError );
 	return (
 		<WrappedField { ...{ ...props, errorMessage } }>
-			<MappedField { ...props } controlProps={ { ...controlProps, isInvalid: Boolean( errorMessage ) } } />
+			<MappedField { ...props } inputProps={ { ...inputProps, isInvalid: !! errorMessage } } />
 		</WrappedField>
 	);
 };
@@ -46,26 +46,30 @@ const WrappedField = ( props ) => {
 		desc,
 		before,
 		after,
+		inputProps = {},
 		controlProps,
 		children,
 		errorMessage,
 		noBottomBorder,
+		labelColProps,
+		wrapperColProps,
 	} = props;
 	return (
 		<FormControl
-			display={ { lg: 'flex' } }
+			display={ { sm: 'flex', md: 'block', lg: 'flex' } }
 			justifyContent="space-between"
-			py={ 20 }
+			py={ 10 }
 			borderBottom={ noBottomBorder ? 0 : '1px' }
 			borderColor="gray.200"
-			isInvalid={ Boolean( errorMessage ) }
+			isInvalid={ !! errorMessage }
+			{ ...controlProps }
 		>
-			<Box width="30%">
-				<FormLabel htmlFor={ controlProps.id ? controlProps.id : null }>
+			<Box width={ { base: '100%', sm: '30%', md: '100%', lg: '30%' } } py={ 10 } { ...labelColProps }>
+				<FormLabel htmlFor={ inputProps.id || null }>
 					{ label || null }
 				</FormLabel>
 			</Box>
-			<Box width="70%">
+			<Box width={ { base: '100%', sm: '70%', md: '100%', lg: '70%' } } py={ 10 } { ...wrapperColProps }>
 				{ before }
 				{ children }
 				<FormErrorMessage>{ errorMessage }</FormErrorMessage>

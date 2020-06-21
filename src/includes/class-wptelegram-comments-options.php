@@ -111,13 +111,16 @@ class WPTelegram_Comments_Options implements Iterator, ArrayAccess {
 	 */
 	public function set( $key, $value = '' ) {
 
-		if ( empty( $this->option_key ) ) {
-			return false;
+		if ( ! empty( $this->option_key ) ) {
+
+			$this->data[ $key ] = apply_filters( strtolower( __CLASS__ ) . "_{$this->option_key}_set_{$key}", $value );
+
+			return $this->update_data();
 		}
 
-		$this->data[ $key ] = apply_filters( strtolower( __CLASS__ ) . "_{$this->option_key}_set_{$key}", $value );
+		$this->data[ $key ] = $value;
 
-		return $this->update_data();
+		return $this;
 	}
 
 	/**

@@ -44,3 +44,6 @@
 a {
     text-decoration: none;
 }
+textarea {
+    max-width: 500px;
+}

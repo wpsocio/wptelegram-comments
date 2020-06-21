@@ -203,7 +203,7 @@ export const generateMoFiles = () => {
 };
 
 const createVersionUpdateCB = ( forFile, version ) => {
-	let patterns;
+	let patterns = [];
 	const replaceCB = ( match, p1 ) => match.replace( p1, version );
 
 	switch ( forFile ) {

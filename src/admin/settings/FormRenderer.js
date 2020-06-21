@@ -50,8 +50,11 @@ export default ( props ) => {
 						return value;
 					} }
 					controlProps={ {
+						isRequired: true,
+					} }
+					inputProps={ {
 						id: 'code',
-						rows: 3,
+						rows: 4,
 						cols: 60,
 						style: {
 							resize: 'none',
@@ -77,7 +80,7 @@ export default ( props ) => {
 					desc={ __( 'The comments widget will be shown on the selected post types.' ) }
 					label={ getFieldLabel( 'post_types' ) }
 					options={ post_types }
-					controlProps={ {
+					inputProps={ {
 						id: 'post_types',
 						isInline: true,
 						spacing: 8,
@@ -91,7 +94,7 @@ export default ( props ) => {
 					label={ getFieldLabel( 'exclude' ) }
 					desc={ __( 'To exclude the specific posts, enter the post or page IDs separated by comma.' ) }
 					noBottomBorder
-					controlProps={ {
+					inputProps={ {
 						id: 'exclude',
 						rows: 4,
 						cols: 60,
