@@ -45,8 +45,21 @@ class WPTelegram_Comments_Admin {
 	 * Register the stylesheets for the admin area.
 	 *
 	 * @since    1.0.0
+	 *
+	 * @param string $hook_suffix Hook name.
+	 * @return void
 	 */
-	public function enqueue_styles( $hook_suffix ) {
+	public function enqueue_styles( $hook_suffix = '' ) {
+
+		if ( ! defined( 'WPTELEGRAM_LOADED' ) ) {
+			wp_enqueue_style(
+				$this->plugin->name(),
+				$this->plugin->url( '/admin/css/admin-menu' ) . $this->plugin->suffix() . '.css',
+				array(),
+				$this->plugin->version(),
+				'all'
+			);
+		}
 
 		// Load only on settings page.
 		if ( $this->is_settings_page( $hook_suffix ) ) {
@@ -56,7 +69,7 @@ class WPTelegram_Comments_Admin {
 			if ( file_exists( $this->plugin->dir( $style_path ) ) ) {
 
 				// Avoid caching for development.
-				$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? date( 'y.m.d-is', filemtime( $this->plugin->dir( $style_path ) ) ) : $this->plugin->version();
+				$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? gmdate( 'y.m.d-is', filemtime( $this->plugin->dir( $style_path ) ) ) : $this->plugin->version();
 
 				wp_enqueue_style( $this->plugin->name() . '-main', $this->plugin->url( $style_path ), array(), $version, 'all' );
 			}
@@ -107,7 +120,7 @@ class WPTelegram_Comments_Admin {
 		if ( $this->is_settings_page( $hook_suffix ) ) {
 
 			// Avoid caching for development.
-			$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? date( 'y.m.d-is', filemtime( $this->plugin->dir( '/admin/settings/main.js' ) ) ) : $this->plugin->version();
+			$version = defined( 'WPTELEGRAM_DEV' ) && WPTELEGRAM_DEV ? gmdate( 'y.m.d-is', filemtime( $this->plugin->dir( '/admin/settings/main.js' ) ) ) : $this->plugin->version();
 
 			wp_enqueue_script( $this->plugin->name() . '-settings', $this->plugin->url( '/admin/settings/main.js' ), array( 'jquery' ), $version, true );
 
@@ -149,21 +162,6 @@ class WPTelegram_Comments_Admin {
 			// For Twitter Follow button.
 			wp_enqueue_script( $this->plugin->name() . '-twitter', 'https://platform.twitter.com/widgets.js', array(), $this->plugin->version(), true );
 		}
-
-		// If the block editor assets are loaded.
-		/* if ( did_action( 'enqueue_block_editor_assets' ) ) {
-			$data = array(
-				'blocks' => array(
-					'assets' => array(),
-				),
-			);
-
-			wp_add_inline_script(
-				$this->plugin->name(),
-				sprintf( 'Object.assign(wptelegram_comments, %s);', json_encode( $data ) ), // phpcs:ignore WordPress.WP.AlternativeFunctions
-				'before'
-			);
-		} */
 	}
 
 	/**
@@ -253,8 +251,7 @@ class WPTelegram_Comments_Admin {
 				esc_html( $this->plugin->title() ),
 				'manage_options',
 				$this->plugin->name(),
-				array( $this, 'display_plugin_admin_page' ),
-				$this->plugin->url( '/admin/icons/icon-16x16-white.svg' )
+				array( $this, 'display_plugin_admin_page' )
 			);
 		}
 	}
