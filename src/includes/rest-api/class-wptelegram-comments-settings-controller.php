@@ -185,7 +185,7 @@ class WPTelegram_Comments_Settings_Controller extends WPTelegram_Comments_REST_C
 	public static function validate_param( $value, WP_REST_Request $request, $key ) {
 		switch ( $key ) {
 			case 'code':
-				$pattern = '/\A<script[^>]+?data-comments-app-website="[^">]+?"[^>]+?><\/script>\Z/';
+				$pattern = '/\A<script[^>]+?><\/script>\Z/';
 				break;
 		}
 
