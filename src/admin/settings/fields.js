@@ -10,7 +10,7 @@ import { __, sprintf } from './i18n';
 export const validate = ( values ) => {
 	const errors = {};
 
-	const codeRegEx = /^<script[^>]+?data-comments-app-website="[^">]+?"[^>]+?><\/script>$/i;
+	const codeRegEx = /^<script[^>]+?><\/script>$/i;
 
 	if ( ! values.code ) {
 		errors.code = getErrorMessage( 'code', 'required' );

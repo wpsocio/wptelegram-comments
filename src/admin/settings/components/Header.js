@@ -16,42 +16,44 @@ export default () => {
 
 	return (
 		<SectionCard
-			title={ <>
-				<Box
-					as="img"
-					src={ assets.logo_url }
-					alt={ title }
-					d="inline-block"
-					verticalAlign="middle"
-					className="header-logo"
-				/>
-				<Box
-					d="inline-flex"
-					verticalAlign="middle"
-					alignItems="baseline"
-					justifyContent="center'"
-				>
-					<Heading
-						as="h4"
-						size="md"
-						fontWeight={ 600 }
+			title={
+				<>
+					<Box
+						as="img"
+						src={ assets.logo_url }
+						alt={ title }
+						h={ 30 }
+						w={ 30 }
 						d="inline-block"
-						m={ 0 }
+						verticalAlign="middle"
+						className="header-logo"
+					/>
+					<Box
+						d="inline-flex"
+						verticalAlign="middle"
+						alignItems="baseline"
+						justifyContent="center'"
 					>
-						{ title }
-					</Heading>
-					<Text as="span" fontStyle="italic" color="gray.500" >
-						&nbsp;v{ version }
-					</Text>
-				</Box>
-			</> }
+						<Heading
+							as="h4"
+							size="md"
+							fontWeight={ 600 }
+							d="inline-block"
+							m={ 0 }
+						>
+							{ title }
+						</Heading>
+						<Text as="span" fontStyle="italic" color="gray.500">
+							&nbsp;v{ version }
+						</Text>
+					</Box>
+				</>
+			}
 		>
-			<Text
-				as="p"
-				fontStyle="italic"
-				textAlign="justify"
-			>
-				{ __( 'With this plugin, you can add comments to posts/pages on your WordPress website by using Telegram Comments Widget.' ) }
+			<Text as="p" fontStyle="italic" textAlign="justify">
+				{ __(
+					'With this plugin, you can add comments to posts/pages on your WordPress website by using Telegram Comments Widget.'
+				) }
 			</Text>
 
 			<SocialIcons />
