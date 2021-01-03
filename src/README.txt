@@ -5,7 +5,7 @@ Tags: telegram, comments, discuss, social, widget
 Requires at least: 4.7
 Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ For rules, see the pinned message. No spam please.
 1. Settings
 
 == Changelog ==
+
+= 1.0.4 =
+- Fixed back-end validation for code
 
 = 1.0.3 =
 - Add support for channel discussion scripts
