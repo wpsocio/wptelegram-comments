@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.0.3 - 2021-01-3](https://github.com/manzoorwanijk/wptelegram-comments/releases/tag/v1.0.3)
+
 ### Enhancements
 
 - Add support for channel discussion scripts
