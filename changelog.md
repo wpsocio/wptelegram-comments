@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.0.4 - 2021-01-3](https://github.com/manzoorwanijk/wptelegram-comments/releases/tag/v1.0.4)
+
+### Bug fixes
+
+- Fixed back-end validation for code
+
 ## [1.0.3 - 2021-01-3](https://github.com/manzoorwanijk/wptelegram-comments/releases/tag/v1.0.3)
 
 ### Enhancements
