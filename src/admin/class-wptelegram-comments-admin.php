@@ -133,7 +133,7 @@ class WPTelegram_Comments_Admin {
 					),
 					'saved_opts' => current_user_can( 'manage_options' ) ? WPTelegram_Comments_Settings_Controller::get_default_settings() : array(),
 					'assets'     => array(
-						'logo_url' => $this->plugin->url( '/admin/icons/icon-30x30.svg' ),
+						'logo_url' => $this->plugin->url( '/admin/icons/icon-128x128.png' ),
 						'tg_icon'  => $this->plugin->url( '/admin/icons/tg-icon.svg' ),
 					),
 					'i18n'       => wptelegram_get_jed_locale_data( 'wptelegram-comments' ),
