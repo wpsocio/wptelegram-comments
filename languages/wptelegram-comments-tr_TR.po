@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: WP Telegram Comments\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-"
 "comments\n"
-"POT-Creation-Date: 2020-06-21 10:32:34+00:00\n"
+"POT-Creation-Date: 2021-01-03 16:31:48+00:00\n"
 "PO-Revision-Date: 2019-09-05 12:50+0530\n"
 "Last-Translator: \n"
 "Language-Team: WP Telegram\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: admin/settings\n"
 
-#: admin/class-wptelegram-comments-admin.php:245
+#: admin/class-wptelegram-comments-admin.php:243
 msgid "Telegram Comments"
 msgstr "Telegram Yorumları"
 
