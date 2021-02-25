@@ -35,32 +35,28 @@ define( 'WPTELEGRAM_COMMENTS_DIR', untrailingslashit( plugin_dir_path( __FILE__ 
 
 defined( 'WPTELEGRAM_COMMENTS_URL' ) || define( 'WPTELEGRAM_COMMENTS_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 
+
+/**
+ * Include autoloader.
+ */
+require WPTELEGRAM_COMMENTS_DIR . '/autoload.php';
+
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-wptelegram-comments-activator.php
  */
 function activate_wptelegram_comments() {
-	require_once WPTELEGRAM_COMMENTS_DIR . '/includes/class-wptelegram-comments-activator.php';
-	WPTelegram_Comments_Activator::activate();
+	\WPTelegram\Comments\includes\Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-wptelegram-comments-deactivator.php
  */
 function deactivate_wptelegram_comments() {
-	require_once WPTELEGRAM_COMMENTS_DIR . '/includes/class-wptelegram-comments-deactivator.php';
-	WPTelegram_Comments_Deactivator::deactivate();
+	\WPTelegram\Comments\includes\Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_wptelegram_comments' );
 register_deactivation_hook( __FILE__, 'deactivate_wptelegram_comments' );
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require WPTELEGRAM_COMMENTS_DIR . '/includes/class-wptelegram-comments.php';
 
 /**
  * Begins execution of the plugin and acts as the main instance of WPTelegram_Comments.
@@ -72,10 +68,12 @@ require WPTELEGRAM_COMMENTS_DIR . '/includes/class-wptelegram-comments.php';
  * not affect the page life cycle.
  *
  * @since    1.0.0
+ *
+ * @return \WPTelegram\Comments\includes\Main
  */
 function WPTG_Comments() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName -- Ignore  snake_case
 
-	return WPTelegram_Comments::instance();
+	return \WPTelegram\Comments\includes\Main::instance();
 }
 
 // Fire.

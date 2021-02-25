@@ -12,6 +12,11 @@
  * @subpackage WPTelegram_Comments/includes
  */
 
+namespace WPTelegram\Comments\includes;
+
+use \WPTelegram\Comments\admin\Admin;
+use \WPTelegram\Comments\shared\Shared;
+
 /**
  * The core plugin class.
  *
@@ -26,13 +31,13 @@
  * @subpackage WPTelegram_Comments/includes
  * @author     Manzoor Wani <@manzoorwanijk>
  */
-class WPTelegram_Comments {
+class Main {
 
 	/**
 	 * The single instance of the class.
 	 *
 	 * @since 1.0.0
-	 * @var   WPTelegram_Comments|null $instance The instance.
+	 * @var   Main|null $instance The instance.
 	 */
 	protected static $instance = null;
 
@@ -42,7 +47,7 @@ class WPTelegram_Comments {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      WPTelegram_Comments_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -78,7 +83,7 @@ class WPTelegram_Comments {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $options    The plugin options
+	 * @var      Options    $options    The plugin options.
 	 */
 	protected $options;
 
@@ -125,10 +130,11 @@ class WPTelegram_Comments {
 
 		$this->version = WPTELEGRAM_COMMENTS_VER;
 
-		$this->plugin_name = strtolower( __CLASS__ );
+		$this->plugin_name = 'wptelegram_comments';
 
 		$this->load_dependencies();
 		$this->set_options();
+		$this->set_assets();
 
 		$this->set_locale();
 		$this->define_admin_hooks();
@@ -156,46 +162,7 @@ class WPTelegram_Comments {
 	 */
 	private function load_dependencies() {
 
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		require_once $this->dir( '/includes/class-wptelegram-comments-loader.php' );
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		require_once $this->dir( '/includes/class-wptelegram-comments-i18n.php' );
-
-		/**
-		 * The class responsible for plugin options
-		 */
-		require_once $this->dir( '/includes/class-wptelegram-comments-options.php' );
-
-		/**
-		 * The classes responsible for WP REST API of the plugin.
-		 */
-		require_once $this->dir( '/includes/rest-api/class-wptelegram-comments-rest-controller.php' );
-		require_once $this->dir( '/includes/rest-api/class-wptelegram-comments-settings-controller.php' );
-
-		/**
-		 * The class responsible for defining all actions that occur in the admin area.
-		 */
-		require_once $this->dir( '/admin/class-wptelegram-comments-admin.php' );
-
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
-		require_once $this->dir( '/public/class-wptelegram-comments-public.php' );
-
-		/**
-		 * Helper functions
-		 */
-		require_once $this->dir( '/includes/helper-functions.php' );
-
-		$this->loader = new WPTelegram_Comments_Loader();
+		$this->loader = new Loader();
 
 	}
 
@@ -207,7 +174,7 @@ class WPTelegram_Comments {
 	 */
 	private function set_options() {
 
-		$this->options = new WPTelegram_Comments_Options( $this->name() );
+		$this->options = new Options( $this->name() );
 
 	}
 
@@ -222,10 +189,34 @@ class WPTelegram_Comments {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new WPTelegram_Comments_I18n();
+		$plugin_i18n = new I18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
+	}
+
+	/**
+	 * Set the assets handler.
+	 *
+	 * @since    x.y.z
+	 * @access   private
+	 */
+	private function set_assets() {
+		$this->assets = new Assets( $this->dir( '/assets' ), $this->url( '/assets' ) );
+	}
+
+
+	/**
+	 * Get the plugin assets handler.
+	 *
+	 * @since    x.y.z
+	 * @access   public
+	 *
+	 * @return Assets The assets instance.
+	 */
+	public function assets() {
+
+		return $this->assets;
 	}
 
 	/**
@@ -237,10 +228,7 @@ class WPTelegram_Comments {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new WPTelegram_Comments_Admin( $this );
-
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$plugin_admin = new Admin( $this );
 
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu', 11 );
 
@@ -257,11 +245,16 @@ class WPTelegram_Comments {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new WPTelegram_Comments_Public( $this );
+		$shared = new Shared( $this );
 
-		$this->loader->add_filter( 'comments_template', $plugin_public, 'set_comments_template', PHP_INT_MAX );
+		$this->loader->add_filter( 'comments_template', $shared, 'set_comments_template', PHP_INT_MAX );
 
-		$this->loader->add_filter( 'wptelegram_comments_widget_attributes', $plugin_public, 'set_widget_attributes', 10, 2 );
+		$this->loader->add_filter( 'wptelegram_comments_widget_attributes', $shared, 'set_widget_attributes', 10, 2 );
+
+		$asset_manager = new AssetManager( $this );
+
+		$this->loader->add_action( 'admin_enqueue_scripts', $asset_manager, 'enqueue_admin_styles' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $asset_manager, 'enqueue_admin_scripts' );
 
 	}
 
@@ -278,7 +271,7 @@ class WPTelegram_Comments {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    WPTelegram_Comments_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;
@@ -352,16 +345,4 @@ class WPTelegram_Comments {
 	public function url( $path = '' ) {
 		return WPTELEGRAM_COMMENTS_URL . $path;
 	}
-
-	/**
-	 * The suffix to use for plugin assets.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string The suffix to use.
-	 */
-	public function suffix() {
-		return ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	}
-
 }

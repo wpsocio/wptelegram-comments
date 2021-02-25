@@ -9,6 +9,11 @@
  * @subpackage WPTelegram_Comments/public
  */
 
+namespace WPTelegram\Comments\shared;
+
+use WPTelegram\Comments\includes\BaseClass;
+use WPTelegram\Comments\includes\Utils;
+
 /**
  * The public-facing functionality of the plugin.
  *
@@ -19,34 +24,14 @@
  * @subpackage WPTelegram_Comments/public
  * @author     Manzoor Wani <@manzoorwanijk>
  */
-class WPTelegram_Comments_Public {
-
-	/**
-	 * The plugin class instance.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      WPTelegram_Comments $plugin The plugin class instance.
-	 */
-	private $plugin;
-
-	/**
-	 * Initialize the class and set its properties.
-	 *
-	 * @since 1.0.0
-	 * @param WPTelegram_Comments $plugin The plugin class instance.
-	 */
-	public function __construct( $plugin ) {
-
-		$this->plugin = $plugin;
-	}
+class Shared extends BaseClass {
 
 	/**
 	 * Set the widget attributes.
 	 *
 	 * @since 1.0.0
-	 * @param string  $attributes The attributes string.
-	 * @param WP_Post $post       The current post.
+	 * @param string   $attributes The attributes string.
+	 * @param \WP_Post $post       The current post.
 	 */
 	public function set_widget_attributes( $attributes, $post ) {
 
@@ -81,7 +66,7 @@ class WPTelegram_Comments_Public {
 				 * The value returned by locate_template() is a path to file.
 				 * if either the child theme or the parent theme have overridden the template.
 				 */
-				if ( self::is_valid_template( $overridden_template ) ) {
+				if ( Utils::is_valid_template( $overridden_template ) ) {
 					$template = $overridden_template;
 				}
 			} else {
@@ -100,7 +85,7 @@ class WPTelegram_Comments_Public {
 	 * Check if the rules apply to the post.
 	 *
 	 * @since 1.0.0
-	 * @param WP_Post $post The current post.
+	 * @param \WP_Post $post The current post.
 	 * @return bool
 	 */
 	private function rules_apply( $post ) {
@@ -125,7 +110,7 @@ class WPTelegram_Comments_Public {
 	 * Check if the rules apply to the post.
 	 *
 	 * @since 1.0.0
-	 * @param WP_Post $post The current post.
+	 * @param \WP_Post $post The current post.
 	 * @return bool
 	 */
 	private function check_for_rules( $post ) {
@@ -146,38 +131,4 @@ class WPTelegram_Comments_Public {
 
 		return true;
 	}
-
-	/**
-	 * Check whether the template path is valid.
-	 *
-	 * @since 1.0.0
-	 * @param string $template The template path.
-	 *
-	 * @return bool
-	 */
-	private static function is_valid_template( $template ) {
-		/**
-		 * Only allow templates that are in the active theme directory,
-		 * parent theme directory, or the /wp-includes/theme-compat/ directory
-		 * (prevent directory traversal attacks)
-		 */
-		$valid_paths = array_map(
-			'realpath',
-			array(
-				get_stylesheet_directory(),
-				get_template_directory(),
-				ABSPATH . WPINC . '/theme-compat/',
-			)
-		);
-
-		$path = realpath( $template );
-
-		foreach ( $valid_paths as $valid_path ) {
-			if ( preg_match( '#\A' . preg_quote( $valid_path, '#' ) . '#', $path ) ) {
-				return true;
-			}
-		}
-		return false;
-	}
-
 }

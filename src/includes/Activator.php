@@ -1,14 +1,15 @@
 <?php
-
 /**
  * Fired during plugin activation
  *
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  */
+
+namespace WPTelegram\Comments\includes;
 
 /**
  * Fired during plugin activation.
@@ -16,21 +17,18 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  * @author     Manzoor Wani <@manzoorwanijk>
  */
-class WPTelegram_Comments_Activator {
+class Activator {
 
 	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
+	 * Runs the activation stuff.
 	 *
 	 * @since    1.0.0
 	 */
 	public static function activate() {
 
 	}
-
 }

@@ -2,22 +2,27 @@
 /**
  * Handles the options access of the plugin
  *
- * @link  https://t.me/manzoorwanijk
- * @since 1.0.0
+ * @link       https://t.me/manzoorwanijk
+ * @since      1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  */
+
+namespace WPTelegram\Comments\includes;
+
+use Iterator;
+use ArrayAccess;
 
 /**
  * Allows an easy access to plugin options/settings
  * which are in the form of an array
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  * @author     Manzoor Wani
  */
-class WPTelegram_Comments_Options implements Iterator, ArrayAccess {
+class Options implements Iterator, ArrayAccess {
 
 	/**
 	 * Plugin option key saved in the database
@@ -100,6 +105,39 @@ class WPTelegram_Comments_Options implements Iterator, ArrayAccess {
 	}
 
 	/**
+	 * Retrieves an option by nested path, with keys separated by dot.
+	 *
+	 * @since x.y.z
+	 *
+	 * @param string $path    Path to the value..
+	 * @param mixed  $default Optional default value.
+	 *
+	 * @return mixed Option value.
+	 */
+	public function get_path( $path = '', $default = false ) {
+		// If it's not a nested path.
+		if ( false === strpos( $path, '.' ) ) {
+			return $this->get( $path, $default );
+		}
+
+		$value = $this->get( 'all' );
+
+		if ( ! is_array( $value ) ) {
+			return $default;
+		}
+
+		foreach ( explode( '.', $path ) as $key ) {
+
+			if ( ! is_array( $value ) || ! array_key_exists( $key, $value ) ) {
+				return $default;
+			}
+			$value = $value[ $key ];
+		}
+
+		return apply_filters( strtolower( __CLASS__ ) . "_{$this->option_key}_get_path_{$path}", $value, $default );
+	}
+
+	/**
 	 * Sets an option by key.
 	 *
 	 * @since 1.0.0
@@ -132,7 +170,7 @@ class WPTelegram_Comments_Options implements Iterator, ArrayAccess {
 	 */
 	public function remove( $key ) {
 
-		unset( $this->data[ $offset ] );
+		unset( $this->data[ $key ] );
 
 		return $this->update_data();
 	}
@@ -251,7 +289,7 @@ class WPTelegram_Comments_Options implements Iterator, ArrayAccess {
 	 * @param string $key Options array key.
 	 */
 	public function __unset( $key ) {
-		return $this->_unset( $key );
+		return $this->remove( $key );
 	}
 
 	/**
@@ -342,7 +380,7 @@ class WPTelegram_Comments_Options implements Iterator, ArrayAccess {
 	 * @param mixed $offset The offset to unset.
 	 */
 	public function offsetUnset( $offset ) {
-		return $this->_unset( $offset );
+		return $this->remove( $offset );
 	}
 
 	/**

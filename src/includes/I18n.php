@@ -8,9 +8,11 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  */
+
+namespace WPTelegram\Comments\includes;
 
 /**
  * Define the internationalization functionality.
@@ -19,11 +21,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  * @author     Manzoor Wani <@manzoorwanijk>
  */
-class WPTelegram_Comments_I18n {
+class I18n {
 
 	/**
 	 * Load the plugin text domain for translation.

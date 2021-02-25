@@ -5,20 +5,32 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  */
+
+namespace WPTelegram\Comments\includes\restApi;
+
+use WP_REST_Request;
+use WP_REST_Server;
 
 /**
  * Class to handle the settings endpoint.
  *
  * @since 1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  * @author     Manzoor Wani <@manzoorwanijk>
  */
-class WPTelegram_Comments_Settings_Controller extends WPTelegram_Comments_REST_Controller {
+class SettingsController extends RESTController {
+
+	/**
+	 * The base of this controller's route.
+	 *
+	 * @var string
+	 */
+	const REST_BASE = '/settings';
 
 	/**
 	 * The plugin settings/options.
@@ -33,8 +45,7 @@ class WPTelegram_Comments_Settings_Controller extends WPTelegram_Comments_REST_C
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		$this->rest_base = 'settings';
-		$this->settings  = WPTG_Comments()->options();
+		$this->settings = WPTG_Comments()->options();
 	}
 
 	/**
@@ -45,8 +56,8 @@ class WPTelegram_Comments_Settings_Controller extends WPTelegram_Comments_REST_C
 	public function register_routes() {
 
 		register_rest_route(
-			$this->namespace,
-			'/' . $this->rest_base,
+			self::NAMESPACE,
+			self::REST_BASE,
 			array(
 				array(
 					'methods'             => WP_REST_Server::READABLE,
@@ -185,7 +196,7 @@ class WPTelegram_Comments_Settings_Controller extends WPTelegram_Comments_REST_C
 	public static function validate_param( $value, WP_REST_Request $request, $key ) {
 		switch ( $key ) {
 			case 'code':
-				$pattern = '/\A<script[^>]+?><\/script>\Z/';
+				$pattern = '/\A<script[^<>]+?><\/script>\Z/';
 				break;
 		}
 
