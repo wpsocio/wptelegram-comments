@@ -5,8 +5,8 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/public
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\shared
  */
 
 namespace WPTelegram\Comments\shared;
@@ -20,8 +20,8 @@ use WPTelegram\Comments\includes\Utils;
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/public
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\shared
  * @author     Manzoor Wani <@manzoorwanijk>
  */
 class Shared extends BaseClass {
@@ -74,7 +74,7 @@ class Shared extends BaseClass {
 				* If neither the child nor parent theme have overridden the template,
 				* we load the template from the 'partials' sub-directory of the directory this file is in.
 				*/
-				$template = $this->plugin->dir( '/public/partials/comments.php' );
+				$template = $this->plugin->dir( '/shared/partials/comments.php' );
 			}
 		}
 
