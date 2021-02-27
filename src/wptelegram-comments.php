@@ -33,7 +33,7 @@ define( 'WPTELEGRAM_COMMENTS_BASENAME', plugin_basename( __FILE__ ) );
 
 define( 'WPTELEGRAM_COMMENTS_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
-defined( 'WPTELEGRAM_COMMENTS_URL' ) || define( 'WPTELEGRAM_COMMENTS_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
+define( 'WPTELEGRAM_COMMENTS_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 
 
 /**
