@@ -8,8 +8,8 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  */
 
 namespace WPTelegram\Comments\includes;
@@ -27,8 +27,8 @@ use \WPTelegram\Comments\shared\Shared;
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/includes
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\includes
  * @author     Manzoor Wani <@manzoorwanijk>
  */
 class Main {
@@ -149,11 +149,6 @@ class Main {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - WPTelegram_Comments_Loader. Orchestrates the hooks of the plugin.
-	 * - WPTelegram_Comments_I18n. Defines internationalization functionality.
-	 * - WPTelegram_Comments_Admin. Defines all hooks for the admin area.
-	 * - WPTelegram_Comments_Public. Defines all hooks for the public side of the site.
-	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
 	 *
@@ -181,7 +176,7 @@ class Main {
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the WPTelegram_Comments_I18n class in order to set the domain and to register the hook
+	 * Uses the I18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -247,7 +242,7 @@ class Main {
 
 		$shared = new Shared( $this );
 
-		$this->loader->add_filter( 'comments_template', $shared, 'set_comments_template', PHP_INT_MAX );
+		$this->loader->add_filter( 'comments_template', $shared, 'set_comments_template', PHP_INT_MAX - 100 );
 
 		$this->loader->add_filter( 'wptelegram_comments_widget_attributes', $shared, 'set_widget_attributes', 10, 2 );
 
