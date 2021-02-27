@@ -3,7 +3,7 @@
  * The assets manager of the plugin.
  *
  * @link       https://t.me/manzoorwanijk
- * @since      x.y.z
+ * @since      1.1.0
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
@@ -28,7 +28,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
-	 * @since    x.y.z
+	 * @since    1.1.0
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function enqueue_admin_styles( $hook_suffix ) {
@@ -60,7 +60,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Register the JavaScript for the admin area.
 	 *
-	 * @since    x.y.z
+	 * @since    1.1.0
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function enqueue_admin_scripts( $hook_suffix ) {
@@ -125,7 +125,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Get the registered post types.
 	 *
-	 * @since  x.y.z
+	 * @since  1.1.0
 	 * @return array
 	 */
 	public function get_post_type_options() {
@@ -151,7 +151,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Enqueue assets for the Gutenberg block
 	 *
-	 * @since x.y.z
+	 * @since 1.1.0
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function is_settings_page( $hook_suffix ) {

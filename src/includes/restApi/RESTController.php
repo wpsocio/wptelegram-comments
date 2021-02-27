@@ -3,7 +3,7 @@
  * WP REST API functionality of the plugin.
  *
  * @link       https://t.me/manzoorwanijk
- * @since      x.y.z
+ * @since      1.1.0
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
@@ -14,7 +14,7 @@ namespace WPTelegram\Comments\includes\restApi;
 /**
  * Base class for all the endpoints.
  *
- * @since x.y.z
+ * @since 1.1.0
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
@@ -26,7 +26,7 @@ abstract class RESTController extends \WP_REST_Controller {
 	 * The namespace of this controller's route.
 	 *
 	 * @var string
-	 * @since x.y.z
+	 * @since 1.1.0
 	 */
 	const NAMESPACE = 'wptelegram-comments/v1';
 

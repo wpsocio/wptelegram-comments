@@ -5,7 +5,7 @@ Tags: telegram, comments, discuss, social, widget
 Requires at least: 5.3
 Tested up to: 5.6.1
 Requires PHP: 7.0
-Stable tag: 1.0.4
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,10 @@ For rules, see the pinned message. No spam please.
 1. Settings
 
 == Changelog ==
+
+= 1.1.0 =
+-   Switched to PHP namespaces
+-   Refreshed and improved the UI
 
 = 1.0.4 =
 - Fixed back-end validation for code

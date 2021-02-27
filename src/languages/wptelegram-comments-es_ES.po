@@ -4,52 +4,27 @@ msgstr ""
 "Project-Id-Version: WP Telegram Comments\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-"
 "comments\n"
-"POT-Creation-Date: 2021-01-03 16:31:48+00:00\n"
-"PO-Revision-Date: 2019-09-07 16:00+0530\n"
+"POT-Creation-Date: 2021-02-27 07:18:14+00:00\n"
+"PO-Revision-Date: 2021-02-27 12:52+0530\n"
 "Last-Translator: \n"
 "Language-Team: WP Telegram\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es_ES\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: admin/settings\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
 
-#: admin/class-wptelegram-comments-admin.php:243
+#: admin/Admin.php:49
 msgid "Telegram Comments"
 msgstr "Comentarios en Telegram"
 
-#: includes/class-wptelegram-comments.php:308
-msgid "WP Telegram Comments"
-msgstr "WP Telegram Comments"
-
-#: languages/wptelegram-comments-js-translations.php:5
-msgid "Configuration"
-msgstr "Configuración"
-
-#: languages/wptelegram-comments-js-translations.php:8
-msgid "Please read the instructions above."
-msgstr "Por favor, lee las anteriores instrucciones."
-
-#: languages/wptelegram-comments-js-translations.php:11
-msgid "The comments widget will be shown on the selected post types."
-msgstr ""
-"El widget de comentarios será mostrado en los tipos de contenido "
-"seleccionados."
-
-#: languages/wptelegram-comments-js-translations.php:14
-msgid ""
-"To exclude the specific posts, enter the post or page IDs separated by comma."
-msgstr ""
-"Para excluir entradas específicas introduce el ID de la entrada o página "
-"separado por comas."
-
-#: languages/wptelegram-comments-js-translations.php:17
+#: includes/AssetManager.php:106
 msgid ""
 "With this plugin, you can add comments to posts/pages on your WordPress "
 "website by using Telegram Comments Widget."
@@ -57,93 +32,208 @@ msgstr ""
 "Con éste plugin puedes añadir comentarios a entradas/páginas de tu sitio "
 "WordPress usando el widget de comentarios de Telegram."
 
+#: includes/Main.php:296
+msgid "WP Telegram Comments"
+msgstr "WP Telegram Comments"
+
+#: languages/wptelegram-comments-js-translations.php:5
+msgid "Code"
+msgstr "Código"
+
+#: languages/wptelegram-comments-js-translations.php:8
+msgid "Exclude"
+msgstr "Excluir"
+
+#: languages/wptelegram-comments-js-translations.php:11
+msgid "Post types"
+msgstr "Tipos de contenido"
+
+#: languages/wptelegram-comments-js-translations.php:14
+msgid "Please read the instructions above."
+msgstr "Por favor, lee las anteriores instrucciones."
+
+#: languages/wptelegram-comments-js-translations.php:17
+msgid "Configuration"
+msgstr "Configuración"
+
 #: languages/wptelegram-comments-js-translations.php:20
-msgid "INSTRUCTIONS!"
-msgstr "¡INSTRUCCIONES!"
+msgid "The comments widget will be shown on the selected post types."
+msgstr ""
+"El widget de comentarios será mostrado en los tipos de contenido "
+"seleccionados."
 
 #: languages/wptelegram-comments-js-translations.php:23
-msgid "Goto %s"
-msgstr "Ir a %s"
+msgid ""
+"To exclude the specific posts, enter the post or page IDs separated by comma."
+msgstr ""
+"Para excluir entradas específicas introduce el ID de la entrada o página "
+"separado por comas."
 
-#: languages/wptelegram-comments-js-translations.php:26
+#. translators: 1 URL
+#: languages/wptelegram-comments-js-translations.php:27
+msgid "Goto %s."
+msgstr "Ir a %s."
+
+#. translators: 1 menu name, 2, 3 buttons
+#: languages/wptelegram-comments-js-translations.php:31
 msgid "Under %1$s click on %2$s or %3$s."
 msgstr "En %1$s haz clic en %2$s o en %3$s."
 
-#: languages/wptelegram-comments-js-translations.php:29
+#. translators: 1 field name, 2 website address, 3 field name
+#: languages/wptelegram-comments-js-translations.php:35
 msgid "Enter your site name in %1$s field and %2$s in %3$s field."
 msgstr ""
 "Introduce el nombre de tu sitio en el campo %1$s y %2$s en el campo %3$s."
 
-#: languages/wptelegram-comments-js-translations.php:32
+#. translators: 1 button name
+#: languages/wptelegram-comments-js-translations.php:39
 msgid "Click on %s and customize the appearance if you want."
 msgstr "Haz clic en %s y personaliza la apariencia si lo deseas."
 
-#: languages/wptelegram-comments-js-translations.php:35
+#. translators: 1, 2 button names
+#: languages/wptelegram-comments-js-translations.php:43
 msgid "Click on %1$s and %2$s."
 msgstr "Haz clic en %1$s y %2$s."
 
-#: languages/wptelegram-comments-js-translations.php:38
+#: languages/wptelegram-comments-js-translations.php:46
 msgid "Paste the copied code in the field below."
 msgstr "Pega el código copiado en el siguiente campo."
 
-#: languages/wptelegram-comments-js-translations.php:42
+#: languages/wptelegram-comments-js-translations.php:50
 msgid "Save Changes"
 msgstr "Guardar cambios"
 
-#: languages/wptelegram-comments-js-translations.php:45
+#: languages/wptelegram-comments-js-translations.php:53
 msgid "Use Telegram Comments widget for your WordPress posts or pages."
 msgstr ""
 "Usa el widget de comentarios de Telegram para tus entradas y páginas de "
 "WordPress."
 
-#: languages/wptelegram-comments-js-translations.php:48
-msgid "Do you like %s?"
-msgstr "¿Te gusta %s?"
-
-#: languages/wptelegram-comments-js-translations.php:51
-msgid "Need help?"
-msgstr "¿Necesitas ayuda?"
-
-#: languages/wptelegram-comments-js-translations.php:54
+#: languages/wptelegram-comments-js-translations.php:56
 msgid "Get LIVE support on Telegram"
 msgstr "Obtén soporte en directo en Telegram"
 
-#: languages/wptelegram-comments-js-translations.php:57
+#: languages/wptelegram-comments-js-translations.php:59
+msgid "INSTRUCTIONS!"
+msgstr "¡INSTRUCCIONES!"
+
+#: languages/wptelegram-comments-js-translations.php:62
+msgid "Do you like %s?"
+msgstr "¿Te gusta %s?"
+
+#: languages/wptelegram-comments-js-translations.php:65
+msgid "Need help?"
+msgstr "¿Necesitas ayuda?"
+
+#: languages/wptelegram-comments-js-translations.php:68
+msgid "Members Count:"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:71
+msgid "Test result:"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:74
+msgid "Test Result:"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:77
 msgid "Follow %s"
 msgstr "Seguir %s"
 
-#: languages/wptelegram-comments-js-translations.php:60
+#: languages/wptelegram-comments-js-translations.php:80
 msgid "Join %s"
 msgstr "Únete a %s"
 
-#: languages/wptelegram-comments-js-translations.php:63
-msgid "Changes saved successfully."
-msgstr "Cambios guardados correctamente."
+#. translators: 1, 2 Menu names
+#: languages/wptelegram-comments-js-translations.php:84
+msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
+msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:66
+#: languages/wptelegram-comments-js-translations.php:87
+msgid "Appearance"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:90
+msgid "Widgets"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:93
+msgid ""
+"Alternately, you can use the below shortcode or the block available in block "
+"editor."
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:96
+msgid "Inside page or post content:"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:99
+msgid "Inside the theme templates"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:102
+msgid "or"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:105
+msgid "Widget Info"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:109
+msgid "Please wait…"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:112
+msgid "Test Token"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:115
+msgid "Send Test"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:118
+msgid "Something went wrong"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:121
+msgid "Could not connect"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:124
+msgid "Error:"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:127
+msgid ""
+"A message will be sent to the Channel/Group/Chat. You can modify the text "
+"below"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:130
+msgid "This is a test message"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:133
+msgid "Success"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:136
 msgid "Lets fix these errors first."
 msgstr "Vamos a corregir esos errores primero."
 
-#: languages/wptelegram-comments-js-translations.php:69
+#: languages/wptelegram-comments-js-translations.php:139
+msgid "Changes saved successfully."
+msgstr "Cambios guardados correctamente."
+
+#: languages/wptelegram-comments-js-translations.php:142
 msgid "Invalid %s"
 msgstr "%s no válido"
 
-#: languages/wptelegram-comments-js-translations.php:72
+#: languages/wptelegram-comments-js-translations.php:145
 msgid "%s required."
 msgstr "%s obligatorio."
 
-#: languages/wptelegram-comments-js-translations.php:75
+#: languages/wptelegram-comments-js-translations.php:148
 msgid "Changes could not be saved."
 msgstr "No se han podido guardar los cambios."
-
-#: languages/wptelegram-comments-js-translations.php:78
-msgid "Code"
-msgstr "Código"
-
-#: languages/wptelegram-comments-js-translations.php:81
-msgid "Exclude"
-msgstr "Excluir"
-
-#: languages/wptelegram-comments-js-translations.php:84
-msgid "Post types"
-msgstr "Tipos de contenido"

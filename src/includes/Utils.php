@@ -3,7 +3,7 @@
  * Utility methods.
  *
  * @link       https://t.me/manzoorwanijk
- * @since      x.y.z
+ * @since      1.1.0
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
@@ -28,7 +28,7 @@ class Utils {
 	/**
 	 * Check whether the template path is valid.
 	 *
-	 * @since x.y.z
+	 * @since 1.1.0
 	 * @param string $template The template path.
 	 *
 	 * @return bool
@@ -63,7 +63,7 @@ class Utils {
 	 *
 	 * @source gutenberg_get_jed_locale_data()
 	 *
-	 * @since x.y.z
+	 * @since 1.1.0
 	 *
 	 * @param  string $domain Translation domain.
 	 *

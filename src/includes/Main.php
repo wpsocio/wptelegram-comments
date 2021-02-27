@@ -193,7 +193,7 @@ class Main {
 	/**
 	 * Set the assets handler.
 	 *
-	 * @since    x.y.z
+	 * @since    1.1.0
 	 * @access   private
 	 */
 	private function set_assets() {
@@ -204,7 +204,7 @@ class Main {
 	/**
 	 * Get the plugin assets handler.
 	 *
-	 * @since    x.y.z
+	 * @since    1.1.0
 	 * @access   public
 	 *
 	 * @return Assets The assets instance.

@@ -1,9 +1,6 @@
 /**
  * Gulp Configuration File
  */
-/**
- * Internal dependencies
- */
 import pkg from './package.json';
 
 const srcDir = './src';
@@ -11,8 +8,16 @@ const name = pkg.name;
 
 const config = {
 	srcDir,
-	buildDir: './build',
 	watchPhp: srcDir + '/**/*.php',
+	vendorBin: './vendor/bin',
+	PhpStandard: 'WordPress',
+	styleSRC: [
+		srcDir + '/**/css/*.css',
+		'!' + srcDir + '/assets/static/**',
+		'!' + srcDir + '/**/*.min.css',
+	],
+	styleDest: srcDir,
+	styleDest: srcDir,
 	// Translation options.
 	textDomain: name,
 	potFilename: `${ name }.pot`,
