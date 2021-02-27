@@ -5,8 +5,8 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/public/partials
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\shared\partials
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,7 +17,7 @@ global $post;
 $attributes = apply_filters( 'wptelegram_comments_widget_attributes', '', $post );
 
 ?>
-<div id="comments" class="comments-area">
+<div id="comments" class="comments comments-area">
 	<?php do_action( 'wptelegram_comments_before_widget' ); ?>
 
 	<?php // phpcs:ignore WordPress.WP.EnqueuedResources ?>

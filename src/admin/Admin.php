@@ -5,8 +5,8 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/admin
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\admin
  */
 
 namespace WPTelegram\Comments\admin;
@@ -19,8 +19,8 @@ use WPTelegram\Comments\includes\BaseClass;
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    WPTelegram_Comments
- * @subpackage WPTelegram_Comments/admin
+ * @package    WPTelegram\Comments
+ * @subpackage WPTelegram\Comments\admin
  * @author     Manzoor Wani <@manzoorwanijk>
  */
 class Admin extends BaseClass {

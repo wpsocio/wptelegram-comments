@@ -4,7 +4,7 @@
  *
  * @link              https://t.me/manzoorwanijk
  * @since             1.0.0
- * @package           WPTelegram_Comments
+ * @package           WPTelegram\Comments
  *
  * @wordpress-plugin
  * Plugin Name:       WP Telegram Comments
@@ -59,9 +59,9 @@ register_activation_hook( __FILE__, 'activate_wptelegram_comments' );
 register_deactivation_hook( __FILE__, 'deactivate_wptelegram_comments' );
 
 /**
- * Begins execution of the plugin and acts as the main instance of WPTelegram_Comments.
+ * Begins execution of the plugin and acts as the main instance of WPTelegram\Comments.
  *
- * Returns the main instance of WPTelegram_Comments to prevent the need to use globals.
+ * Returns an instance of WPTelegram\Comments\includes\Main to prevent the need to use globals.
  *
  * Since everything within the plugin is registered via hooks,
  * then kicking off the plugin from this point in the file does

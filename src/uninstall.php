@@ -5,7 +5,7 @@
  * @link       https://t.me/manzoorwanijk
  * @since      1.0.0
  *
- * @package    WPTelegram_Comments
+ * @package    WPTelegram\Comments
  */
 
 // If uninstall not called from WordPress, then exit.
