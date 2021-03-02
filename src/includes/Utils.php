@@ -11,9 +11,6 @@
 
 namespace WPTelegram\Comments\includes;
 
-use WPTelegram\Comments\includes\restApi\RESTController;
-use WP_Error;
-
 /**
  * Utility methods.
  *
