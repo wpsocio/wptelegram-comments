@@ -1,17 +1,18 @@
 <?php
 /**
+ * Main plugin file.
  *
- * @link              https://t.me/manzoorwanijk
+ * @link              https://manzoorwani.dev
  * @since             1.0.0
  * @package           WPTelegram_Comments
  *
  * @wordpress-plugin
  * Plugin Name:       WP Telegram Comments Dev
  * Plugin URI:        https://t.me/WPTelegram
- * Description:       Development Environment for WP Telegram Comments. Versioned high to avoid auto update.
+ * Description:       ❌ DO NOT DELETE ❌ Development Environment for WP Telegram Comments. Versioned high to avoid auto update.
  * Version:           999.999.999
  * Author:            Manzoor Wani
- * Author URI:        https://t.me/manzoorwanijk
+ * Author URI:        https://manzoorwani.dev
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wptelegram-comments

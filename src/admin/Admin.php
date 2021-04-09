@@ -2,7 +2,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Comments
@@ -45,19 +45,19 @@ class Admin extends BaseClass {
 		if ( defined( 'WPTELEGRAM_LOADED' ) ) {
 			add_submenu_page(
 				'wptelegram',
-				esc_html( $this->plugin->title() ),
+				esc_html( $this->plugin()->title() ),
 				esc_html__( 'Telegram Comments', 'wptelegram-comments' ),
 				'manage_options',
-				$this->plugin->name(),
-				array( $this, 'display_plugin_admin_page' )
+				$this->plugin()->name(),
+				[ $this, 'display_plugin_admin_page' ]
 			);
 		} else {
 			add_menu_page(
-				esc_html( $this->plugin->title() ),
-				esc_html( $this->plugin->title() ),
+				esc_html( $this->plugin()->title() ),
+				esc_html( $this->plugin()->title() ),
 				'manage_options',
-				$this->plugin->name(),
-				array( $this, 'display_plugin_admin_page' )
+				$this->plugin()->name(),
+				[ $this, 'display_plugin_admin_page' ]
 			);
 		}
 	}
@@ -72,5 +72,4 @@ class Admin extends BaseClass {
 			<div id="wptelegram-comments-settings"></div>
 		<?php
 	}
-
 }
