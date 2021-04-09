@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.1.1 - 2021-04-9](https://github.com/manzoorwanijk/wptelegram-comments/releases/tag/v1.1.1)
+
 ### Bug fixes
 
 - Fixed the wrong widget configuration being saved

@@ -45,7 +45,7 @@ abstract class BaseClass {
 	/**
 	 * Get the instance of the plugin.
 	 *
-	 * @since     x.y.z
+	 * @since     1.1.1
 	 * @return    Main    The plugin class instance.
 	 */
 	protected function plugin() {
