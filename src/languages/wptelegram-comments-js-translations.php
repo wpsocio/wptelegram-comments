@@ -11,6 +11,7 @@ $generated_i18n_strings = array(
 	__( 'Post types', 'wptelegram-comments' ),
 
 	// Reference: domains/wptelegram/comments/main/src/ui/Code.tsx:52
+	// Reference: packages/components/src/BotTokenField.tsx:38
 	__( 'Please read the instructions above.', 'wptelegram-comments' ),
 
 	// Reference: domains/wptelegram/comments/main/src/ui/Configuration.tsx:12
@@ -58,18 +59,22 @@ $generated_i18n_strings = array(
 	// Reference: packages/components/src/Instructions/Instructions.tsx:15
 	__( 'INSTRUCTIONS!', 'wptelegram-comments' ),
 
-	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:42
+	// Reference: packages/components/src/InstructionsLink.tsx:12
+	__( 'Click here for instructions.', 'wptelegram-comments' ),
+
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:44
 	__( 'Do you like %s?', 'wptelegram-comments' ),
 
-	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:61
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:54
+	__( 'Write a review', 'wptelegram-comments' ),
+
+	// Reference: packages/components/src/PluginInfo/PluginInfoCard.tsx:64
 	__( 'Need help?', 'wptelegram-comments' ),
 
 	// Reference: packages/components/src/TestResult/MemberCountResult.tsx:15
 	__( 'Members Count:', 'wptelegram-comments' ),
 
 	// Reference: packages/components/src/TestResult/TestMessageResult.tsx:15
-	__( 'Test result:', 'wptelegram-comments' ),
-
 	// Reference: packages/components/src/TestResult/TestResult.tsx:14
 	__( 'Test Result:', 'wptelegram-comments' ),
 
@@ -104,23 +109,26 @@ $generated_i18n_strings = array(
 	// Reference: packages/components/src/WidgetInfo/WidgetInfoCard.tsx:14
 	__( 'Widget Info', 'wptelegram-comments' ),
 
-	// Reference: packages/components/src/useBotTokenTest.tsx:39
-	// Reference: packages/components/src/useChatWithTest.tsx:89
+	// Reference: packages/components/src/useBotTokenTest.tsx:96
+	// Reference: packages/components/src/useChatWithTest.tsx:94
 	__( 'Please wait…', 'wptelegram-comments' ),
 
-	// Reference: packages/components/src/useBotTokenTest.tsx:39
+	// Reference: packages/components/src/useBotTokenTest.tsx:96
 	__( 'Test Token', 'wptelegram-comments' ),
 
-	// Reference: packages/components/src/useChatWithTest.tsx:89
+	// Reference: packages/components/src/useChatWithTest.tsx:94
 	__( 'Send Test', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/apiFetch/index.ts:31
+	// Reference: packages/form/src/render/RenderRepeatable.tsx:101
+	__( 'Add', 'wptelegram-comments' ),
+
+	// Reference: packages/services/src/apiFetch/index.ts:35
 	__( 'Something went wrong', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/apiFetch/index.ts:33
+	// Reference: packages/services/src/apiFetch/index.ts:37
 	__( 'Could not connect', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/apiFetch/index.ts:36
+	// Reference: packages/services/src/apiFetch/index.ts:40
 	__( 'Error:', 'wptelegram-comments' ),
 
 	// Reference: packages/services/src/telegram/TelegramUtils.ts:105
@@ -135,7 +143,7 @@ $generated_i18n_strings = array(
 	// Reference: packages/services/src/useDisplayFeedback.ts:64
 	__( 'Lets fix these errors first.', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/useSubmitForm.ts:42
+	// Reference: packages/services/src/useSubmitForm.ts:50
 	__( 'Changes saved successfully.', 'wptelegram-comments' ),
 
 	// Reference: packages/utilities/src/fields.ts:29

@@ -5,9 +5,9 @@ module.exports = {
 		es6: true,
 		node: true,
 	},
-	extends: ["plugin:prettier/recommended"],
+	extends: ['plugin:prettier/recommended'],
 	parserOptions: {
-		sourceType: "module",
+		sourceType: 'module',
 		allowImportExportEverywhere: true,
 		codeFrame: true,
 		ecmaFeatures: {
@@ -15,8 +15,8 @@ module.exports = {
 		},
 		ecmaVersion: 2020,
 	},
-	plugins: ["prettier"],
+	plugins: ['prettier'],
 	globals: {
-		jQuery: "readonly",
+		jQuery: 'readonly',
 	},
 };

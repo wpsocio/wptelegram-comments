@@ -2,7 +2,7 @@
 /**
  * Plugin settings endpoint for WordPress REST API.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Comments
@@ -58,20 +58,20 @@ class SettingsController extends RESTController {
 		register_rest_route(
 			self::NAMESPACE,
 			self::REST_BASE,
-			array(
-				array(
+			[
+				[
 					'methods'             => WP_REST_Server::READABLE,
-					'callback'            => array( $this, 'get_settings' ),
-					'permission_callback' => array( $this, 'settings_permissions' ),
+					'callback'            => [ $this, 'get_settings' ],
+					'permission_callback' => [ $this, 'settings_permissions' ],
 					'args'                => self::get_settings_params( 'view' ),
-				),
-				array(
+				],
+				[
 					'methods'             => WP_REST_Server::CREATABLE,
-					'callback'            => array( $this, 'update_settings' ),
-					'permission_callback' => array( $this, 'settings_permissions' ),
+					'callback'            => [ $this, 'update_settings' ],
+					'permission_callback' => [ $this, 'settings_permissions' ],
 					'args'                => self::get_settings_params( 'edit' ),
-				),
-			)
+				],
+			]
 		);
 	}
 
@@ -128,7 +128,7 @@ class SettingsController extends RESTController {
 	 */
 	public function update_settings( WP_REST_Request $request ) {
 
-		$settings = array();
+		$settings = [];
 
 		foreach ( self::get_settings_params() as $key => $args ) {
 			$value = $request->get_param( $key );
@@ -153,35 +153,35 @@ class SettingsController extends RESTController {
 	 * @return array Query parameters for the settings.
 	 */
 	public static function get_settings_params( $context = 'edit' ) {
-		return array(
-			'code'       => array(
+		return [
+			'code'       => [
 				'type'              => 'string',
 				'required'          => ( 'edit' === $context ),
-				'sanitize_callback' => array( __CLASS__, 'sanitize_param' ),
-				'validate_callback' => array( __CLASS__, 'validate_param' ),
-			),
-			'attributes' => array(
+				'sanitize_callback' => [ __CLASS__, 'sanitize_param' ],
+				'validate_callback' => [ __CLASS__, 'validate_param' ],
+			],
+			'attributes' => [
 				'type'                 => 'object',
 				'additionalProperties' => true,
-				'default'              => array( 'async' => 'async' ),
-				'sanitize_callback'    => array( __CLASS__, 'sanitize_param' ),
+				'default'              => [ 'async' => 'async' ],
+				'sanitize_callback'    => [ __CLASS__, 'sanitize_param' ],
 				'validate_callback'    => 'rest_validate_request_arg',
-			),
-			'post_types' => array(
+			],
+			'post_types' => [
 				'type'              => 'array',
-				'items'             => array(
+				'items'             => [
 					'type' => 'string',
-				),
-				'default'           => array( 'post' ),
-				'sanitize_callback' => array( __CLASS__, 'sanitize_param' ),
+				],
+				'default'           => [ 'post' ],
+				'sanitize_callback' => [ __CLASS__, 'sanitize_param' ],
 				'validate_callback' => 'rest_validate_request_arg',
-			),
-			'exclude'    => array(
+			],
+			'exclude'    => [
 				'type'              => 'string',
-				'sanitize_callback' => array( __CLASS__, 'sanitize_param' ),
+				'sanitize_callback' => [ __CLASS__, 'sanitize_param' ],
 				'validate_callback' => 'rest_validate_request_arg',
-			),
-		);
+			],
+		];
 	}
 
 	/**

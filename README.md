@@ -3,8 +3,8 @@
 **Contributors:** [manzoorwanijk](https://github.com/manzoorwanijk)  
 **Tags:** telegram, comments, discuss, social, widget  
 **Requires at least:** 5.3  
-**Tested up to:** 5.6.1  
-**Stable tag:** 1.1.0  
+**Tested up to:** 5.7  
+**Stable tag:** 1.1.1  
 **License:** GPLv2 or later  
 **License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -19,7 +19,7 @@ Complete contributors list found here: [github.com/manzoorwanijk/wptelegram-comm
 ## Description
 
 Add comments to posts/pages on your WordPress website by using Telegram Comments Widget.
-Comments on a WordPress post not only fills your database tables rather they also make it difficult to moderate efficiently. Telegram comments removes this drawback because the comments are stored on Telegram servers and every comment is from an authenticated Telegram user.
+Comments on WordPress posts not only fill your database tables, rather they also make it difficult to moderate efficiently. Telegram comments removes this drawback because the comments are stored on Telegram servers and every comment is from an authenticated Telegram user.
 
 ## Why Telegram Comments?
 

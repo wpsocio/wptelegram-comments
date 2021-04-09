@@ -2,7 +2,7 @@
 /**
  * The main plugin file.
  *
- * @link              https://t.me/manzoorwanijk
+ * @link              https://manzoorwani.dev
  * @since             1.0.0
  * @package           WPTelegram\Comments
  *
@@ -10,9 +10,9 @@
  * Plugin Name:       WP Telegram Comments
  * Plugin URI:        https://t.me/WPTelegram
  * Description:       Add comments to posts/pages on your WordPress website by using Telegram Comments Widget.
- * Version:           1.1.0
+ * Version:           1.1.1
  * Author:            Manzoor Wani
- * Author URI:        https://t.me/manzoorwanijk
+ * Author URI:        https://manzoorwani.dev
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wptelegram-comments
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'WPTELEGRAM_COMMENTS_VER', '1.1.0' );
+define( 'WPTELEGRAM_COMMENTS_VER', '1.1.1' );
 
 define( 'WPTELEGRAM_COMMENTS_BASENAME', plugin_basename( __FILE__ ) );
 

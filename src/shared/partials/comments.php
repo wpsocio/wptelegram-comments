@@ -2,7 +2,7 @@
 /**
  * Provide a public-facing view for the widget
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Comments

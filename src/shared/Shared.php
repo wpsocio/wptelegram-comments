@@ -2,7 +2,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://t.me/manzoorwanijk
+ * @link       https://manzoorwani.dev
  * @since      1.0.0
  *
  * @package    WPTelegram\Comments
@@ -35,7 +35,7 @@ class Shared extends BaseClass {
 	 */
 	public function set_widget_attributes( $attributes, $post ) {
 
-		$attributes_array = $this->plugin->options()->get( 'attributes' );
+		$attributes_array = $this->plugin()->options()->get( 'attributes' );
 
 		$attributes_array['async']        = 'async';
 		$attributes_array['data-page-id'] = $post->ID;
@@ -74,7 +74,7 @@ class Shared extends BaseClass {
 				* If neither the child nor parent theme have overridden the template,
 				* we load the template from the 'partials' sub-directory of the directory this file is in.
 				*/
-				$template = $this->plugin->dir( '/shared/partials/comments.php' );
+				$template = $this->plugin()->dir( '/shared/partials/comments.php' );
 			}
 		}
 
@@ -115,9 +115,9 @@ class Shared extends BaseClass {
 	 */
 	private function check_for_rules( $post ) {
 
-		$options = $this->plugin->options();
+		$options = $this->plugin()->options();
 
-		$post_types = $options->get( 'post_types', array() );
+		$post_types = $options->get( 'post_types', [] );
 
 		if ( ! in_array( $post->post_type, $post_types, true ) ) {
 			return false;
