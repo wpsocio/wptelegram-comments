@@ -1,17 +1,17 @@
 {
   "files": {
-    "wptelegram-comments--main.css": "/static/css/wptelegram-comments--main.f22e4da7.css",
-    "wptelegram-comments--main.js": "/static/js/wptelegram-comments--main.cdf3ab22.js",
-    "wptelegram-comments--main.js.map": "/static/js/wptelegram-comments--main.cdf3ab22.js.map",
-    "wptelegram-comments--main.php": "/static/js/wptelegram-comments--main.2a36b2ed.asset.php",
-    "static/css/wptelegram-comments--main.f22e4da7.css.map": "/static/css/wptelegram-comments--main.f22e4da7.css.map",
-    "static/js/wptelegram-comments--main.cdf3ab22.js.LICENSE.txt": "/static/js/wptelegram-comments--main.cdf3ab22.js.LICENSE.txt"
+    "wptelegram-comments--main.css": "/static/css/wptelegram-comments--main.06282bb8.css",
+    "wptelegram-comments--main.js": "/static/js/wptelegram-comments--main.0dfa8ba1.js",
+    "wptelegram-comments--main.js.map": "/static/js/wptelegram-comments--main.0dfa8ba1.js.map",
+    "wptelegram-comments--main.php": "/static/js/wptelegram-comments--main.265d4903.asset.php",
+    "static/css/wptelegram-comments--main.06282bb8.css.map": "/static/css/wptelegram-comments--main.06282bb8.css.map",
+    "static/js/wptelegram-comments--main.0dfa8ba1.js.LICENSE.txt": "/static/js/wptelegram-comments--main.0dfa8ba1.js.LICENSE.txt"
   },
   "entrypoints": {
     "wptelegram-comments--main": [
-      "static/css/wptelegram-comments--main.f22e4da7.css",
-      "static/js/wptelegram-comments--main.cdf3ab22.js",
-      "static/js/wptelegram-comments--main.2a36b2ed.asset.php"
+      "static/css/wptelegram-comments--main.06282bb8.css",
+      "static/js/wptelegram-comments--main.0dfa8ba1.js",
+      "static/js/wptelegram-comments--main.265d4903.asset.php"
     ]
   }
 }
