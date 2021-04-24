@@ -64,7 +64,6 @@ msgid "Paste the copied code in the field below."
 msgstr ""
 
 #: domains/wptelegram/comments/main/src/ui/Instructions.tsx:87
-#: domains/wptelegram/comments/main/src/ui/SubmitInfo.tsx:11
 #: packages/components/src/Submit/SubmitButton.tsx:15
 msgid "Save Changes"
 msgstr ""
@@ -207,7 +206,7 @@ msgstr ""
 msgid "Lets fix these errors first."
 msgstr ""
 
-#: packages/services/src/useSubmitForm.ts:50
+#: packages/services/src/useSubmitForm.ts:54
 msgid "Changes saved successfully."
 msgstr ""
 
