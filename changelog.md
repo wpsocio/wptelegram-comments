@@ -4,6 +4,10 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+### Bug fixes
+
+- Fixed the issue of settings not saved due to trailing slash redirects
+
 ## [1.1.1 - 2021-04-9](https://github.com/manzoorwanijk/wptelegram-comments/releases/tag/v1.1.1)
 
 ### Bug fixes
