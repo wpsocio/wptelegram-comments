@@ -47,7 +47,7 @@ $generated_i18n_strings = array(
 	__( 'Paste the copied code in the field below.', 'wptelegram-comments' ),
 
 	// Reference: domains/wptelegram/comments/main/src/ui/Instructions.tsx:87
-	// Reference: domains/wptelegram/comments/main/src/ui/SubmitInfo.tsx:11
+	// Reference: packages/components/src/Submit/SubmitButton.tsx:15
 	__( 'Save Changes', 'wptelegram-comments' ),
 
 	// Reference: domains/wptelegram/comments/main/src/ui/Sidebar.tsx:17
@@ -55,6 +55,12 @@ $generated_i18n_strings = array(
 
 	// Reference: domains/wptelegram/comments/main/src/ui/Sidebar.tsx:18
 	__( 'Get LIVE support on Telegram', 'wptelegram-comments' ),
+
+	// Reference: packages/components/src/ConfirmDialog.tsx:53
+	__( 'No', 'wptelegram-comments' ),
+
+	// Reference: packages/components/src/ConfirmDialog.tsx:56
+	__( 'Yes', 'wptelegram-comments' ),
 
 	// Reference: packages/components/src/Instructions/Instructions.tsx:15
 	__( 'INSTRUCTIONS!', 'wptelegram-comments' ),
@@ -74,7 +80,9 @@ $generated_i18n_strings = array(
 	// Reference: packages/components/src/TestResult/MemberCountResult.tsx:15
 	__( 'Members Count:', 'wptelegram-comments' ),
 
-	// Reference: packages/components/src/TestResult/TestMessageResult.tsx:15
+	// Reference: packages/components/src/TestResult/MessageResult.tsx:15
+	__( 'Result:', 'wptelegram-comments' ),
+
 	// Reference: packages/components/src/TestResult/TestResult.tsx:14
 	__( 'Test Result:', 'wptelegram-comments' ),
 
@@ -140,10 +148,10 @@ $generated_i18n_strings = array(
 	// Reference: packages/services/src/telegram/TelegramUtils.ts:124
 	__( 'Success', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/useDisplayFeedback.ts:64
+	// Reference: packages/services/src/useDisplayFeedback.ts:62
 	__( 'Lets fix these errors first.', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/useSubmitForm.ts:50
+	// Reference: packages/services/src/useSubmitForm.ts:54
 	__( 'Changes saved successfully.', 'wptelegram-comments' ),
 
 	// Reference: packages/utilities/src/fields.ts:29

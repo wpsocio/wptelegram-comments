@@ -2,9 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram Comments\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wptelegram-"
-"comments\n"
-"POT-Creation-Date: 2021-04-09 09:48:57+00:00\n"
+"Report-Msgid-Bugs-To: https://github.com/manzoorwanijk/wptelegram-comments\n"
+"POT-Creation-Date: 2021-04-28 09:40:04+00:00\n"
 "PO-Revision-Date: 2021-02-27 12:53+0530\n"
 "Last-Translator: \n"
 "Language-Team: WP Telegram\n"
@@ -110,135 +109,147 @@ msgid "Get LIVE support on Telegram"
 msgstr "Dapatkan dukungan LANGSUNG di Telegram"
 
 #: languages/wptelegram-comments-js-translations.php:60
+msgid "No"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:63
+msgid "Yes"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:66
 msgid "INSTRUCTIONS!"
 msgstr "INSTRUKSI!"
 
-#: languages/wptelegram-comments-js-translations.php:63
+#: languages/wptelegram-comments-js-translations.php:69
 #, fuzzy
 msgid "Click here for instructions."
 msgstr "Harap baca instruksi di atas."
 
-#: languages/wptelegram-comments-js-translations.php:66
+#: languages/wptelegram-comments-js-translations.php:72
 msgid "Do you like %s?"
 msgstr "Anda menyukai %s?"
 
-#: languages/wptelegram-comments-js-translations.php:69
+#: languages/wptelegram-comments-js-translations.php:75
 msgid "Write a review"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:72
+#: languages/wptelegram-comments-js-translations.php:78
 msgid "Need help?"
 msgstr "Perlu bantuan?"
 
-#: languages/wptelegram-comments-js-translations.php:75
+#: languages/wptelegram-comments-js-translations.php:81
 msgid "Members Count:"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:79
+#: languages/wptelegram-comments-js-translations.php:84
+msgid "Result:"
+msgstr ""
+
+#: languages/wptelegram-comments-js-translations.php:87
 msgid "Test Result:"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:82
+#: languages/wptelegram-comments-js-translations.php:90
 msgid "Follow %s"
 msgstr "Ikuti %s"
 
-#: languages/wptelegram-comments-js-translations.php:85
+#: languages/wptelegram-comments-js-translations.php:93
 msgid "Join %s"
 msgstr "Bergabung %s"
 
 #. translators: 1, 2 Menu names
-#: languages/wptelegram-comments-js-translations.php:89
+#: languages/wptelegram-comments-js-translations.php:97
 msgid "Goto %1$s and click/drag %2$s and place it where you want it to be."
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:92
+#: languages/wptelegram-comments-js-translations.php:100
 msgid "Appearance"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:95
+#: languages/wptelegram-comments-js-translations.php:103
 msgid "Widgets"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:98
+#: languages/wptelegram-comments-js-translations.php:106
 msgid ""
 "Alternately, you can use the below shortcode or the block available in block "
 "editor."
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:101
+#: languages/wptelegram-comments-js-translations.php:109
 msgid "Inside page or post content:"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:104
+#: languages/wptelegram-comments-js-translations.php:112
 msgid "Inside the theme templates"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:107
+#: languages/wptelegram-comments-js-translations.php:115
 msgid "or"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:110
+#: languages/wptelegram-comments-js-translations.php:118
 msgid "Widget Info"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:114
+#: languages/wptelegram-comments-js-translations.php:122
 msgid "Please wait…"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:117
+#: languages/wptelegram-comments-js-translations.php:125
 msgid "Test Token"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:120
+#: languages/wptelegram-comments-js-translations.php:128
 msgid "Send Test"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:123
+#: languages/wptelegram-comments-js-translations.php:131
 msgid "Add"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:126
+#: languages/wptelegram-comments-js-translations.php:134
 msgid "Something went wrong"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:129
+#: languages/wptelegram-comments-js-translations.php:137
 msgid "Could not connect"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:132
+#: languages/wptelegram-comments-js-translations.php:140
 msgid "Error:"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:135
+#: languages/wptelegram-comments-js-translations.php:143
 msgid ""
 "A message will be sent to the Channel/Group/Chat. You can modify the text "
 "below"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:138
+#: languages/wptelegram-comments-js-translations.php:146
 msgid "This is a test message"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:141
+#: languages/wptelegram-comments-js-translations.php:149
 msgid "Success"
 msgstr ""
 
-#: languages/wptelegram-comments-js-translations.php:144
+#: languages/wptelegram-comments-js-translations.php:152
 msgid "Lets fix these errors first."
 msgstr "Mari pebaiki galat berikut terlebih dahulu."
 
-#: languages/wptelegram-comments-js-translations.php:147
+#: languages/wptelegram-comments-js-translations.php:155
 msgid "Changes saved successfully."
 msgstr "Perubahan berhasil disimpan."
 
-#: languages/wptelegram-comments-js-translations.php:150
+#: languages/wptelegram-comments-js-translations.php:158
 msgid "Invalid %s"
 msgstr "%s invalid"
 
-#: languages/wptelegram-comments-js-translations.php:153
+#: languages/wptelegram-comments-js-translations.php:161
 msgid "%s required."
 msgstr "Diperlukan %s."
 
-#: languages/wptelegram-comments-js-translations.php:156
+#: languages/wptelegram-comments-js-translations.php:164
 msgid "Changes could not be saved."
 msgstr "Perubahan tidak dapat disimpan."
