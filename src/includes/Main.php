@@ -42,16 +42,6 @@ class Main {
 	protected static $instance = null;
 
 	/**
-	 * The loader that's responsible for maintaining and registering all hooks that power
-	 * the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      Loader    $loader    Maintains and registers all hooks for the plugin.
-	 */
-	protected $loader;
-
-	/**
 	 * Title of the plugin.
 	 *
 	 * @since    1.0.0
@@ -86,6 +76,24 @@ class Main {
 	 * @var      Options    $options    The plugin options.
 	 */
 	protected $options;
+
+	/**
+	 * The assets handler.
+	 *
+	 * @since    1.1.0
+	 * @access   protected
+	 * @var      Assets $assets The assets handler.
+	 */
+	protected $assets;
+
+	/**
+	 * The asset manager.
+	 *
+	 * @since    x.y.z
+	 * @access   protected
+	 * @var      AssetManager $asset_manager The asset manager.
+	 */
+	protected $asset_manager;
 
 	/**
 	 * Main class Instance.
@@ -132,45 +140,9 @@ class Main {
 
 		$this->plugin_name = 'wptelegram_comments';
 
-		$this->load_dependencies();
-		$this->set_options();
-		$this->set_assets();
-
 		$this->set_locale();
 		$this->define_admin_hooks();
-		$this->define_public_hooks();
-
-		$this->run();
-
-	}
-
-	/**
-	 * Load the required dependencies for this plugin.
-	 *
-	 * Include the following files that make up the plugin:
-	 *
-	 * Create an instance of the loader which will be used to register the hooks
-	 * with WordPress.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 */
-	private function load_dependencies() {
-
-		$this->loader = new Loader();
-
-	}
-
-	/**
-	 * Set the plugin options
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 */
-	private function set_options() {
-
-		$this->options = new Options( $this->name() );
-
+		$this->define_shared_hooks();
 	}
 
 	/**
@@ -186,8 +158,33 @@ class Main {
 
 		$plugin_i18n = new I18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		add_action( 'plugins_loaded', [ $plugin_i18n, 'load_plugin_textdomain' ] );
+	}
 
+	/**
+	 * Set the plugin options
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_options() {
+
+		$this->options = new Options( $this->name() );
+	}
+
+	/**
+	 * Get the plugin options
+	 *
+	 * @since    1.0.0
+	 * @access   public
+	 *
+	 * @return Options
+	 */
+	public function options() {
+		if ( ! $this->options ) {
+			$this->set_options();
+		}
+		return $this->options;
 	}
 
 	/**
@@ -200,7 +197,6 @@ class Main {
 		$this->assets = new Assets( $this->dir( '/assets' ), $this->url( '/assets' ) );
 	}
 
-
 	/**
 	 * Get the plugin assets handler.
 	 *
@@ -210,8 +206,37 @@ class Main {
 	 * @return Assets The assets instance.
 	 */
 	public function assets() {
+		if ( ! $this->assets ) {
+			$this->set_assets();
+		}
 
 		return $this->assets;
+	}
+
+	/**
+	 * Set the asset manager.
+	 *
+	 * @since    x.y.z
+	 * @access   private
+	 */
+	private function set_asset_manager() {
+		$this->asset_manager = new AssetManager( $this );
+	}
+
+	/**
+	 * Get the plugin assets manager.
+	 *
+	 * @since    x.y.z
+	 * @access   public
+	 *
+	 * @return AssetManager The asset manager.
+	 */
+	public function asset_manager() {
+		if ( ! $this->asset_manager ) {
+			$this->set_asset_manager();
+		}
+
+		return $this->asset_manager;
 	}
 
 	/**
@@ -225,9 +250,10 @@ class Main {
 
 		$plugin_admin = new Admin( $this );
 
-		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu', 11 );
+		add_action( 'admin_menu', [ $plugin_admin, 'add_plugin_admin_menu' ] );
+		add_action( 'admin_menu', [ Utils::class, 'update_menu_structure' ], 5 );
 
-		$this->loader->add_action( 'rest_api_init', $plugin_admin, 'register_rest_routes' );
+		add_action( 'rest_api_init', [ $plugin_admin, 'register_rest_routes' ] );
 
 	}
 
@@ -238,49 +264,20 @@ class Main {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_public_hooks() {
+	private function define_shared_hooks() {
 
 		$shared = new Shared( $this );
 
-		$this->loader->add_filter( 'comments_template', $shared, 'set_comments_template', PHP_INT_MAX - 100 );
+		add_filter( 'comments_template', [ $shared, 'set_comments_template' ], PHP_INT_MAX - 100 );
 
-		$this->loader->add_filter( 'wptelegram_comments_widget_attributes', $shared, 'set_widget_attributes', 10, 2 );
+		add_filter( 'wptelegram_comments_widget_attributes', [ $shared, 'set_widget_attributes' ], 10, 2 );
 
-		$asset_manager = new AssetManager( $this );
+		$asset_manager = $this->asset_manager();
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $asset_manager, 'enqueue_admin_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $asset_manager, 'enqueue_admin_scripts' );
+		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_styles' ] );
+		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_scripts' ] );
+		add_action( 'init', [ $asset_manager, 'register_assets' ] );
 
-	}
-
-	/**
-	 * Run the loader to execute all of the hooks with WordPress.
-	 *
-	 * @since    1.0.0
-	 */
-	public function run() {
-		$this->loader->run();
-	}
-
-	/**
-	 * The reference to the class that orchestrates the hooks with the plugin.
-	 *
-	 * @since     1.0.0
-	 * @return    Loader    Orchestrates the hooks of the plugin.
-	 */
-	public function get_loader() {
-		return $this->loader;
-	}
-
-	/**
-	 * Get the plugin options
-	 *
-	 * @since    1.0.0
-	 * @access   public
-	 */
-	public function options() {
-
-		return $this->options;
 	}
 
 	/**
