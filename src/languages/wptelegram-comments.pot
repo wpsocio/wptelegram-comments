@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/manzoorwanijk/wptelegram-comments\n"
-"POT-Creation-Date: 2021-04-28 09:40:04+00:00\n"
+"POT-Creation-Date: 2021-05-03 21:18:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2021-04-28 9:40-330\n"
+"PO-Revision-Date: 2021-05-3 21:180\n"
 "Last-Translator: WP Telegram Comments\n"
 "Language-Team: WP Telegram Comments\n"
 "Language: en_US\n"
@@ -23,18 +23,22 @@ msgstr ""
 "X-Generator: node-wp-i18n\n"
 "X-Poedit-SearchPathExcluded-0: assets\n"
 
-#: admin/Admin.php:49
+#: admin/Admin.php:47
 msgid "Telegram Comments"
 msgstr ""
 
-#: includes/AssetManager.php:106
+#: includes/AssetManager.php:154
 msgid ""
 "With this plugin, you can add comments to posts/pages on your WordPress "
 "website by using Telegram Comments Widget."
 msgstr ""
 
-#: includes/Main.php:296
+#: includes/Main.php:293
 msgid "WP Telegram Comments"
+msgstr ""
+
+#: includes/Utils.php:98 includes/Utils.php:99
+msgid "WP Telegram"
 msgstr ""
 
 #: languages/wptelegram-comments-js-translations.php:5

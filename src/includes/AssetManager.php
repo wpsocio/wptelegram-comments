@@ -31,7 +31,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Register the assets.
 	 *
-	 * @since    x.y.z
+	 * @since    1.1.3
 	 */
 	public function register_assets() {
 
@@ -124,7 +124,7 @@ class AssetManager extends BaseClass {
 	/**
 	 * Add the data to DOM.
 	 *
-	 * @since x.y.z
+	 * @since 1.1.3
 	 *
 	 * @param string $handle The script handle to attach the data to.
 	 * @param mixed  $data   The data to add.

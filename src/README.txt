@@ -5,7 +5,7 @@ Tags: telegram, comments, discuss, social, widget
 Requires at least: 5.3
 Tested up to: 5.7.1
 Requires PHP: 7.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,10 @@ For rules, see the pinned message. No spam please.
 1. Settings
 
 == Changelog ==
+
+= 1.1.3 =
+- Cleaned up the admin menu for single entry for WP Telegram
+- Fixed the ugly post type list when there are plenty of them
 
 = 1.1.2 =
 - Fixed the issue of settings not saved due to trailing slash redirects
