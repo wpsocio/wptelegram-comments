@@ -4,6 +4,16 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.1.3 - 2021-05-3](https://github.com/manzoorwanijk/wptelegram-comments/releases/tag/v1.1.3)
+
+### Improvements
+
+- Cleaned up the admin menu for single entry for WP Telegram
+
+### Bug fixes
+
+- Fixed the ugly post type list when there are plenty of them
+
 ## [1.1.2 - 2021-04-28](https://github.com/manzoorwanijk/wptelegram-comments/releases/tag/v1.1.2)
 
 ### Bug fixes

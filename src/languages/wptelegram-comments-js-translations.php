@@ -20,7 +20,7 @@ $generated_i18n_strings = array(
 	// Reference: domains/wptelegram/comments/main/src/ui/Configuration.tsx:18
 	__( 'The comments widget will be shown on the selected post types.', 'wptelegram-comments' ),
 
-	// Reference: domains/wptelegram/comments/main/src/ui/Configuration.tsx:27
+	// Reference: domains/wptelegram/comments/main/src/ui/Configuration.tsx:26
 	__( 'To exclude the specific posts, enter the post or page IDs separated by comma.', 'wptelegram-comments' ),
 
 	// Reference: domains/wptelegram/comments/main/src/ui/Instructions.tsx:16

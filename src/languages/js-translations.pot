@@ -28,7 +28,7 @@ msgstr ""
 msgid "The comments widget will be shown on the selected post types."
 msgstr ""
 
-#: domains/wptelegram/comments/main/src/ui/Configuration.tsx:27
+#: domains/wptelegram/comments/main/src/ui/Configuration.tsx:26
 msgid ""
 "To exclude the specific posts, enter the post or page IDs separated by "
 "comma."

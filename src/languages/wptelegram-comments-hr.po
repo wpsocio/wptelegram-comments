@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram Comments\n"
 "Report-Msgid-Bugs-To: https://github.com/manzoorwanijk/wptelegram-comments\n"
-"POT-Creation-Date: 2021-04-28 09:40:04+00:00\n"
+"POT-Creation-Date: 2021-05-03 21:18:15+00:00\n"
 "PO-Revision-Date: 2021-02-27 12:53+0530\n"
 "Last-Translator: \n"
 "Language-Team: WP Telegram\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
@@ -19,11 +19,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: assets\n"
 
-#: admin/Admin.php:49
+#: admin/Admin.php:47
 msgid "Telegram Comments"
 msgstr "Telegram Komentari"
 
-#: includes/AssetManager.php:106
+#: includes/AssetManager.php:154
 msgid ""
 "With this plugin, you can add comments to posts/pages on your WordPress "
 "website by using Telegram Comments Widget."
@@ -31,8 +31,13 @@ msgstr ""
 "S ovim dodatkom, možete omogućiti komentare na vaše WordPress postove i "
 "stranice koristeći Telegram Comments Widget."
 
-#: includes/Main.php:296
+#: includes/Main.php:293
 msgid "WP Telegram Comments"
+msgstr "WP Telegram Komentari"
+
+#: includes/Utils.php:98 includes/Utils.php:99
+#, fuzzy
+msgid "WP Telegram"
 msgstr "WP Telegram Komentari"
 
 #: languages/wptelegram-comments-js-translations.php:5
