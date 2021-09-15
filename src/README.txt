@@ -2,10 +2,10 @@
 Contributors: manzoorwanijk
 Donate link: https://paypal.me/manzoorwanijk
 Tags: telegram, comments, discuss, social, widget
-Requires at least: 5.3
-Tested up to: 5.7.1
+Requires at least: 5.4
+Tested up to: 5.8.1
 Requires PHP: 7.0
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ For rules, see the pinned message. No spam please.
 1. Settings
 
 == Changelog ==
+
+= 1.1.4 =
+- Minor UI improvements
 
 = 1.1.3 =
 - Cleaned up the admin menu for single entry for WP Telegram

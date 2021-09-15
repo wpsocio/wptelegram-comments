@@ -118,13 +118,13 @@ $generated_i18n_strings = array(
 	__( 'Widget Info', 'wptelegram-comments' ),
 
 	// Reference: packages/components/src/useBotTokenTest.tsx:96
-	// Reference: packages/components/src/useChatWithTest.tsx:94
+	// Reference: packages/components/src/useChatWithTest.tsx:95
 	__( 'Please wait…', 'wptelegram-comments' ),
 
 	// Reference: packages/components/src/useBotTokenTest.tsx:96
 	__( 'Test Token', 'wptelegram-comments' ),
 
-	// Reference: packages/components/src/useChatWithTest.tsx:94
+	// Reference: packages/components/src/useChatWithTest.tsx:95
 	__( 'Send Test', 'wptelegram-comments' ),
 
 	// Reference: packages/form/src/render/RenderRepeatable.tsx:101
@@ -154,13 +154,13 @@ $generated_i18n_strings = array(
 	// Reference: packages/services/src/useSubmitForm.ts:54
 	__( 'Changes saved successfully.', 'wptelegram-comments' ),
 
-	// Reference: packages/utilities/src/fields.ts:29
+	// Reference: packages/utilities/src/fields.ts:31
 	__( 'Invalid %s', 'wptelegram-comments' ),
 
-	// Reference: packages/utilities/src/fields.ts:32
+	// Reference: packages/utilities/src/fields.ts:34
 	__( '%s required.', 'wptelegram-comments' ),
 
-	// Reference: packages/utilities/src/fields.ts:35
+	// Reference: packages/utilities/src/fields.ts:37
 	__( 'Changes could not be saved.', 'wptelegram-comments' )
 );
 /* THIS IS THE END OF THE GENERATED FILE */

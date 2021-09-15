@@ -160,7 +160,7 @@ msgid "Widget Info"
 msgstr ""
 
 #: packages/components/src/useBotTokenTest.tsx:96
-#: packages/components/src/useChatWithTest.tsx:94
+#: packages/components/src/useChatWithTest.tsx:95
 msgid "Please wait…"
 msgstr ""
 
@@ -168,7 +168,7 @@ msgstr ""
 msgid "Test Token"
 msgstr ""
 
-#: packages/components/src/useChatWithTest.tsx:94
+#: packages/components/src/useChatWithTest.tsx:95
 msgid "Send Test"
 msgstr ""
 
@@ -210,14 +210,14 @@ msgstr ""
 msgid "Changes saved successfully."
 msgstr ""
 
-#: packages/utilities/src/fields.ts:29
+#: packages/utilities/src/fields.ts:31
 msgid "Invalid %s"
 msgstr ""
 
-#: packages/utilities/src/fields.ts:32
+#: packages/utilities/src/fields.ts:34
 msgid "%s required."
 msgstr ""
 
-#: packages/utilities/src/fields.ts:35
+#: packages/utilities/src/fields.ts:37
 msgid "Changes could not be saved."
 msgstr ""
