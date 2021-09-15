@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.1.4 - 2021-09-15](https://github.com/manzoorwanijk/wptelegram-comments/releases/tag/v1.1.4)
+
 ### Improvements
 
 - Minor UI improvements
