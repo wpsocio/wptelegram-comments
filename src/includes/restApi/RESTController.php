@@ -2,7 +2,7 @@
 /**
  * WP REST API functionality of the plugin.
  *
- * @link       https://manzoorwani.dev
+ * @link       https://wpsocio.com
  * @since      1.1.0
  *
  * @package    WPTelegram\Comments
@@ -18,7 +18,7 @@ namespace WPTelegram\Comments\includes\restApi;
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
- * @author     Manzoor Wani <@manzoorwanijk>
+ * @author     WP Socio
  */
 abstract class RESTController extends \WP_REST_Controller {
 

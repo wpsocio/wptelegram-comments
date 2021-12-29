@@ -4,7 +4,7 @@
  *
  * Parts of this code are copied from https://github.com/eventespresso/event-espresso-core
  *
- * @link       https://manzoorwani.dev
+ * @link       https://wpsocio.com
  * @since      1.1.0
  *
  * @package    WPTelegram\Comments
@@ -19,7 +19,7 @@ namespace WPTelegram\Comments\includes;
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
- * @author     Manzoor Wani
+ * @author     WP Socio
  */
 class Assets {
 

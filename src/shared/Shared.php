@@ -2,7 +2,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://manzoorwani.dev
+ * @link       https://wpsocio.com
  * @since      1.0.0
  *
  * @package    WPTelegram\Comments
@@ -22,7 +22,7 @@ use WPTelegram\Comments\includes\Utils;
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\shared
- * @author     Manzoor Wani <@manzoorwanijk>
+ * @author     WP Socio
  */
 class Shared extends BaseClass {
 

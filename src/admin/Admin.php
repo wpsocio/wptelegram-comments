@@ -2,7 +2,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://manzoorwani.dev
+ * @link       https://wpsocio.com
  * @since      1.0.0
  *
  * @package    WPTelegram\Comments
@@ -21,7 +21,7 @@ use WPTelegram\Comments\includes\BaseClass;
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\admin
- * @author     Manzoor Wani <@manzoorwanijk>
+ * @author     WP Socio
  */
 class Admin extends BaseClass {
 
