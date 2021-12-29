@@ -5,7 +5,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://manzoorwani.dev
+ * @link       https://wpsocio.com
  * @since      1.0.0
  *
  * @package    WPTelegram\Comments
@@ -29,7 +29,7 @@ use \WPTelegram\Comments\shared\Shared;
  * @since      1.0.0
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
- * @author     Manzoor Wani <@manzoorwanijk>
+ * @author     WP Socio
  */
 class Main {
 

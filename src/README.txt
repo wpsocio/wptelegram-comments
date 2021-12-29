@@ -1,11 +1,11 @@
 === WP Telegram Comments ===
-Contributors: manzoorwanijk
-Donate link: https://paypal.me/manzoorwanijk
+Contributors: wpsocio, irshadahmad21
+Donate link: https://wpsocio.com
 Tags: telegram, comments, discuss, social, widget
-Requires at least: 5.4
-Tested up to: 5.8.1
+Requires at least: 5.7
+Tested up to: 5.8.2
 Requires PHP: 7.0
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ For rules, see the pinned message. No spam please.
 1. Settings
 
 == Changelog ==
+
+= 1.1.5 =
+- Maintenance release
 
 = 1.1.4 =
 - Minor UI improvements

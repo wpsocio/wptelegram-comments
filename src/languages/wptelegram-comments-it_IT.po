@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram Comments\n"
-"Report-Msgid-Bugs-To: https://github.com/manzoorwanijk/wptelegram-comments\n"
+"Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-comments\n"
 "POT-Creation-Date: 2021-05-03 21:18:15+00:00\n"
 "PO-Revision-Date: 2021-02-27 12:53+0530\n"
 "Last-Translator: \n"

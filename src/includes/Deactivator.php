@@ -2,7 +2,7 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       https://manzoorwani.dev
+ * @link       https://wpsocio.com
  * @since      1.0.0
  *
  * @package    WPTelegram\Comments
@@ -19,7 +19,7 @@ namespace WPTelegram\Comments\includes;
  * @since      1.0.0
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
- * @author     Manzoor Wani <@manzoorwanijk>
+ * @author     WP Socio
  */
 class Deactivator {
 

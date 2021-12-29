@@ -2,7 +2,7 @@
 /**
  * The assets manager of the plugin.
  *
- * @link       https://manzoorwani.dev
+ * @link       https://wpsocio.com
  * @since      1.1.0
  *
  * @package    WPTelegram\Comments
@@ -21,7 +21,7 @@ use ReflectionClass;
  *
  * @package    WPTelegram\Comments
  * @subpackage WPTelegram\Comments\includes
- * @author     Manzoor Wani <@manzoorwanijk>
+ * @author     WP Socio
  */
 class AssetManager extends BaseClass {
 
