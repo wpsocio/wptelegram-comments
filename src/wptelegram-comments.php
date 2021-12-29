@@ -10,7 +10,7 @@
  * Plugin Name:       WP Telegram Comments
  * Plugin URI:        https://t.me/WPTelegram
  * Description:       Add comments to posts/pages on your WordPress website by using Telegram Comments Widget.
- * Version:           1.1.4
+ * Version:           1.1.5
  * Author:            WP Socio
  * Author URI:        https://wpsocio.com
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'WPTELEGRAM_COMMENTS_VER', '1.1.4' );
+define( 'WPTELEGRAM_COMMENTS_VER', '1.1.5' );
 
 define( 'WPTELEGRAM_COMMENTS_BASENAME', plugin_basename( __FILE__ ) );
 
