@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.1.7 - 2022-11-1](https://github.com/wpsocio/wptelegram-comments/releases/tag/v1.1.7)
+
 ### Bug fixes
 
 - Fixed warnings in PHP 8.x
