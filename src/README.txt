@@ -3,9 +3,9 @@ Contributors: wpsocio, irshadahmad21
 Donate link: https://wpsocio.com
 Tags: telegram, comments, discuss, social, widget
 Requires at least: 5.8
-Tested up to: 6.0.2
+Tested up to: 6.0.3
 Requires PHP: 7.0
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ For rules, see the pinned message. No spam please.
 1. Settings
 
 == Changelog ==
+
+= 1.1.7 =
+- Fixed warnings in PHP 8.x
 
 = 1.1.6 =
 - Maintenance release
