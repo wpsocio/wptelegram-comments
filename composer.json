@@ -3,8 +3,6 @@
 	"version": "1.1.7",
 	"description": "Use Telegram Comments widget for your WordPress posts or pages.",
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "*",
-		"phpcompatibility/php-compatibility": "*",
 		"wp-coding-standards/wpcs": "*"
 	},
 	"scripts": {
