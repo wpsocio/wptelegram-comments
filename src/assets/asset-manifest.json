@@ -1,16 +1,16 @@
 {
   "files": {
-    "wptelegram-comments--main.php": "/static/js/wptelegram-comments--main.fc15df69.asset.php",
+    "wptelegram-comments--main.php": "/static/js/wptelegram-comments--main.e7b62217.asset.php",
     "wptelegram-comments--main.css": "/static/css/wptelegram-comments--main.835e26d5.css",
-    "wptelegram-comments--main.js": "/static/js/wptelegram-comments--main.f755a8ef.js",
+    "wptelegram-comments--main.js": "/static/js/wptelegram-comments--main.b9c73ddf.js",
     "wptelegram-comments--main.835e26d5.css.map": "/static/css/wptelegram-comments--main.835e26d5.css.map",
-    "wptelegram-comments--main.f755a8ef.js.map": "/static/js/wptelegram-comments--main.f755a8ef.js.map"
+    "wptelegram-comments--main.b9c73ddf.js.map": "/static/js/wptelegram-comments--main.b9c73ddf.js.map"
   },
   "entrypoints": {
     "wptelegram-comments--main": [
-      "static/js/wptelegram-comments--main.fc15df69.asset.php",
+      "static/js/wptelegram-comments--main.e7b62217.asset.php",
       "static/css/wptelegram-comments--main.835e26d5.css",
-      "static/js/wptelegram-comments--main.f755a8ef.js"
+      "static/js/wptelegram-comments--main.b9c73ddf.js"
     ]
   }
 }
