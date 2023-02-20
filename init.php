@@ -11,12 +11,15 @@
  * Plugin URI:        https://t.me/WPTelegram
  * Description:       ❌ DO NOT DELETE ❌ Development Environment for WP Telegram Comments. Versioned high to avoid auto update.
  * Version:           999.999.999
+ * Requires at least: 5.8
+ * Requires PHP:      7.0
  * Author:            WP Socio
  * Author URI:        https://wpsocio.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wptelegram-comments
  * Domain Path:       /languages
+ * Update URI:        false
  */
 
 // If this file is called directly, abort.
@@ -28,4 +31,11 @@ if ( ! defined( 'WPTELEGRAM_DEV' ) ) {
 	define( 'WPTELEGRAM_DEV', true );
 }
 
+define( 'WPTELEGRAM_COMMENTS_MAIN_FILE', __FILE__ );
+
+define( 'WPTELEGRAM_COMMENTS_BASENAME', plugin_basename( WPTELEGRAM_COMMENTS_MAIN_FILE ) );
+
 require plugin_dir_path( __FILE__ ) . 'src/wptelegram-comments.php';
+
+register_activation_hook( __FILE__, 'activate_wptelegram_comments' );
+register_deactivation_hook( __FILE__, 'deactivate_wptelegram_comments' );
