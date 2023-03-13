@@ -1,6 +1,6 @@
 === WP Telegram Comments ===
 Contributors: wpsocio, irshadahmad21
-Donate link: https://wpsocio.com
+Donate link: https://wpsocio.com/donate
 Tags: telegram, comments, discuss, social, widget
 Requires at least: 5.8
 Requires PHP: 7.0

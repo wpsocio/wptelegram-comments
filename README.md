@@ -7,7 +7,8 @@
 **Tested up to:** 6.1.1  
 **Stable tag:** 1.1.7  
 **License:** GPLv2 or later  
-**License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+**License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)  
+**Donate link:** [wpsocio.com/donate](https://wpsocio.com/donate)
 
 [![Wordpress plugin](https://img.shields.io/wordpress/plugin/v/wptelegram-comments.svg)](https://wordpress.org/plugins/wptelegram-comments/)
 [![Wordpress](https://img.shields.io/wordpress/plugin/dt/wptelegram-comments.svg)](https://wordpress.org/plugins/wptelegram-comments/)
