@@ -1,14 +1,14 @@
-# Copyright (C) 2022
+# Copyright (C) 2023 
 # This file is distributed under the same license as the  package.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-comments\n"
-"POT-Creation-Date: 2022-11-01 05:41:27+00:00\n"
+"POT-Creation-Date: 2023-05-20 09:04:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2022-11-1 5:410\n"
+"PO-Revision-Date: 2023-05-20 9:40\n"
 "Last-Translator: WP Telegram Comments\n"
 "Language-Team: WP Telegram Comments\n"
 "Language: en_US\n"
@@ -35,6 +35,30 @@ msgstr ""
 
 #: includes/Main.php:293
 msgid "WP Telegram Comments"
+msgstr ""
+
+#: includes/Requirements.php:85
+msgid "This plugin is not compatible with your website configuration."
+msgstr ""
+
+#: includes/Requirements.php:87
+msgid "Missing requirements"
+msgstr ""
+
+#: includes/Requirements.php:100
+#. translators: %s: Version number
+msgid "Current version: %s"
+msgstr ""
+
+#: includes/Requirements.php:108
+#. translators: %s: Version number
+msgid "Minimum required version: %s"
+msgstr ""
+
+#: includes/Requirements.php:120
+msgid ""
+"Please contact your hosting provider to ensure the above requirements are "
+"met."
 msgstr ""
 
 #: includes/Utils.php:98 includes/Utils.php:99
