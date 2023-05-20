@@ -139,19 +139,19 @@ $generated_i18n_strings = array(
 	// Reference: packages/services/src/apiFetch/index.ts:40
 	__( 'Error:', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/telegram/TelegramUtils.ts:105
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:108
 	__( 'A message will be sent to the Channel/Group/Chat. You can modify the text below', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/telegram/TelegramUtils.ts:106
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:109
 	__( 'This is a test message', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/telegram/TelegramUtils.ts:124
+	// Reference: packages/services/src/telegram/TelegramUtils.ts:129
 	__( 'Success', 'wptelegram-comments' ),
 
 	// Reference: packages/services/src/useDisplayFeedback.ts:62
 	__( 'Lets fix these errors first.', 'wptelegram-comments' ),
 
-	// Reference: packages/services/src/useSubmitForm.ts:54
+	// Reference: packages/services/src/useSubmitForm.ts:62
 	__( 'Changes saved successfully.', 'wptelegram-comments' ),
 
 	// Reference: packages/utilities/src/fields.ts:31

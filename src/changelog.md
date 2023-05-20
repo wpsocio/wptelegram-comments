@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 ## Unreleased
 
+## [1.1.8 - 2023-05-20](https://github.com/wpsocio/wptelegram-comments/releases/tag/v1.1.8)
+
+### Bug fixes
+
+- Fixed translations not loaded for some strings
+
 ## [1.1.7 - 2022-11-1](https://github.com/wpsocio/wptelegram-comments/releases/tag/v1.1.7)
 
 ### Bug fixes

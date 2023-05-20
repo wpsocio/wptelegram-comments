@@ -2,11 +2,13 @@
 
 **Contributors:** [wpsocio](https://github.com/wpsocio), [irshadahmad21](https://github.com/irshadahmad21)  
 **Tags:** telegram, comments, discuss, social, widget  
-**Requires at least:** 5.8  
-**Tested up to:** 6.0.3  
-**Stable tag:** 1.1.7  
+**Requires at least:** 5.9  
+**Requires PHP:** 7.0  
+**Tested up to:** 6.2.2  
+**Stable tag:** 1.1.8  
 **License:** GPLv2 or later  
-**License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+**License URI:** [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)  
+**Donate link:** [wpsocio.com/donate](https://wpsocio.com/donate)
 
 [![Wordpress plugin](https://img.shields.io/wordpress/plugin/v/wptelegram-comments.svg)](https://wordpress.org/plugins/wptelegram-comments/)
 [![Wordpress](https://img.shields.io/wordpress/plugin/dt/wptelegram-comments.svg)](https://wordpress.org/plugins/wptelegram-comments/)

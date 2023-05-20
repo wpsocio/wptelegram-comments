@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram Comments\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-comments\n"
-"POT-Creation-Date: 2021-05-03 21:18:15+00:00\n"
+"POT-Creation-Date: 2023-05-20 09:04:22+00:00\n"
 "PO-Revision-Date: 2021-02-27 12:53+0530\n"
 "Last-Translator: \n"
 "Language-Team: WP Telegram\n"
@@ -34,6 +34,30 @@ msgstr ""
 #: includes/Main.php:293
 msgid "WP Telegram Comments"
 msgstr "WP Telegram Comments"
+
+#: includes/Requirements.php:85
+msgid "This plugin is not compatible with your website configuration."
+msgstr ""
+
+#: includes/Requirements.php:87
+msgid "Missing requirements"
+msgstr ""
+
+#. translators: %s: Version number
+#: includes/Requirements.php:100
+msgid "Current version: %s"
+msgstr ""
+
+#. translators: %s: Version number
+#: includes/Requirements.php:108
+msgid "Minimum required version: %s"
+msgstr ""
+
+#: includes/Requirements.php:120
+msgid ""
+"Please contact your hosting provider to ensure the above requirements are "
+"met."
+msgstr ""
 
 #: includes/Utils.php:98 includes/Utils.php:99
 #, fuzzy
