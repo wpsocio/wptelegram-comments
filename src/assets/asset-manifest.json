@@ -1,6 +1,6 @@
 {
   "files": {
-    "wptelegram-comments--main.php": "/static/js/wptelegram-comments--main.b485124c.asset.php",
+    "wptelegram-comments--main.php": "/static/js/wptelegram-comments--main.a4bec824.asset.php",
     "wptelegram-comments--main.css": "/static/css/wptelegram-comments--main.835e26d5.css",
     "wptelegram-comments--main.js": "/static/js/wptelegram-comments--main.057642f6.js",
     "wptelegram-comments--main.835e26d5.css.map": "/static/css/wptelegram-comments--main.835e26d5.css.map",
@@ -8,7 +8,7 @@
   },
   "entrypoints": {
     "wptelegram-comments--main": [
-      "static/js/wptelegram-comments--main.b485124c.asset.php",
+      "static/js/wptelegram-comments--main.a4bec824.asset.php",
       "static/css/wptelegram-comments--main.835e26d5.css",
       "static/js/wptelegram-comments--main.057642f6.js"
     ]
