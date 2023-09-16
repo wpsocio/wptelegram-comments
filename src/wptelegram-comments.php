@@ -80,7 +80,7 @@ function WPTG_Comments() { // phpcs:ignore WordPress.NamingConventions.ValidFunc
 	return \WPTelegram\Comments\includes\Main::instance();
 }
 
-use \WPTelegram\Comments\includes\Requirements;
+use WPTelegram\Comments\includes\Requirements;
 
 if ( Requirements::satisfied() ) {
 	// Fire.
@@ -90,4 +90,3 @@ if ( Requirements::satisfied() ) {
 } else {
 	add_filter( 'after_plugin_row_' . WPTELEGRAM_COMMENTS_BASENAME, [ Requirements::class, 'display_requirements' ] );
 }
-
