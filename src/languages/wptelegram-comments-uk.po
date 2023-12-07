@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram Comments\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-comments\n"
-"POT-Creation-Date: 2023-05-20 09:04:22+00:00\n"
+"POT-Creation-Date: 2023-12-07 11:56:56+00:00\n"
 "PO-Revision-Date: 2021-02-27 12:54+0530\n"
 "Last-Translator: \n"
 "Language-Team: WP Telegram\n"
@@ -30,10 +30,6 @@ msgid ""
 msgstr ""
 "З цим плагіном ви можете додавати коментарі до записів та сторінок на вашому "
 "WordPress сайті використовуючи віджет Коментарі з Telegram."
-
-#: includes/Main.php:293
-msgid "WP Telegram Comments"
-msgstr "WP Telegram Comments"
 
 #: includes/Requirements.php:85
 msgid "This plugin is not compatible with your website configuration."
@@ -283,3 +279,6 @@ msgstr "%s обов’язково."
 #: languages/wptelegram-comments-js-translations.php:164
 msgid "Changes could not be saved."
 msgstr "Зміни не можуть бути збережені."
+
+#~ msgid "WP Telegram Comments"
+#~ msgstr "WP Telegram Comments"

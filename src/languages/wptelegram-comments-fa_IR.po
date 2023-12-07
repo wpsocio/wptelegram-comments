@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Telegram Comments\n"
 "Report-Msgid-Bugs-To: https://github.com/wpsocio/wptelegram-comments\n"
-"POT-Creation-Date: 2023-05-20 09:04:22+00:00\n"
+"POT-Creation-Date: 2023-12-07 11:56:56+00:00\n"
 "PO-Revision-Date: 2021-02-27 12:53+0530\n"
 "Last-Translator: \n"
 "Language-Team: WP Telegram\n"
@@ -30,10 +30,6 @@ msgid ""
 msgstr ""
 "با استفاده از این افزونه شما قادر خواهید بود به پست ها یا پیج های سایت "
 "وردپرسی خود توسط تلگرام، کامنت اضافه کنید."
-
-#: includes/Main.php:293
-msgid "WP Telegram Comments"
-msgstr ""
 
 #: includes/Requirements.php:85
 msgid "This plugin is not compatible with your website configuration."

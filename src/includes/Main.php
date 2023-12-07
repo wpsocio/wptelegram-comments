@@ -14,8 +14,8 @@
 
 namespace WPTelegram\Comments\includes;
 
-use \WPTelegram\Comments\admin\Admin;
-use \WPTelegram\Comments\shared\Shared;
+use WPTelegram\Comments\admin\Admin;
+use WPTelegram\Comments\shared\Shared;
 
 /**
  * The core plugin class.
@@ -254,7 +254,6 @@ class Main {
 		add_action( 'admin_menu', [ Utils::class, 'update_menu_structure' ], 5 );
 
 		add_action( 'rest_api_init', [ $plugin_admin, 'register_rest_routes' ] );
-
 	}
 
 	/**
@@ -277,7 +276,6 @@ class Main {
 		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_styles' ] );
 		add_action( 'admin_enqueue_scripts', [ $asset_manager, 'enqueue_admin_scripts' ] );
 		add_action( 'init', [ $asset_manager, 'register_assets' ] );
-
 	}
 
 	/**
