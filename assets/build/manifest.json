@@ -1,0 +1,10 @@
+{
+  "js/settings/index.ts": {
+    "css": [
+      "dist/settings-T1BGW3Dl.css"
+    ],
+    "file": "dist/settings-5HG6c8MP.js",
+    "isEntry": true,
+    "src": "js/settings/index.ts"
+  }
+}
