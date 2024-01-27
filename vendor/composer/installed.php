@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'wpsocio/wptelegram-comments',
-        'pretty_version' => 'dev-1ddec03eb4b71d3a29c8d59563e8f8dd27c3658a',
-        'version' => 'dev-1ddec03eb4b71d3a29c8d59563e8f8dd27c3658a',
-        'reference' => '1ddec03eb4b71d3a29c8d59563e8f8dd27c3658a',
+        'pretty_version' => 'dev-424e5371fc027ee43519a6e74515967286291166',
+        'version' => 'dev-424e5371fc027ee43519a6e74515967286291166',
+        'reference' => '424e5371fc027ee43519a6e74515967286291166',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'wpsocio/wptelegram-comments' => array(
-            'pretty_version' => 'dev-1ddec03eb4b71d3a29c8d59563e8f8dd27c3658a',
-            'version' => 'dev-1ddec03eb4b71d3a29c8d59563e8f8dd27c3658a',
-            'reference' => '1ddec03eb4b71d3a29c8d59563e8f8dd27c3658a',
+            'pretty_version' => 'dev-424e5371fc027ee43519a6e74515967286291166',
+            'version' => 'dev-424e5371fc027ee43519a6e74515967286291166',
+            'reference' => '424e5371fc027ee43519a6e74515967286291166',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../../',
             'aliases' => array(),
