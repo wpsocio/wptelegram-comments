@@ -2,11 +2,11 @@
 
 **Contributors:** [wpsocio](https://github.com/wpsocio), [irshadahmad21](https://github.com/irshadahmad21)  
 **Tags:** telegram, comments, discuss, social, widget  
-**Requires at least:** 6.2  
+**Requires at least:** 6.4  
 **Requires PHP:** 7.4  
-**Tested up to:** 6.4.1  
-**Stable tag:** 1.1.12  
-**License:** GPLv3  
+**Tested up to:** 6.4.3  
+**Stable tag:** 1.1.13  
+**License:** GPL-3.0-or-later  
 **License URI:** [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)  
 **Donate link:** [wpsocio.com/donate](https://wpsocio.com/donate)
 
@@ -42,7 +42,7 @@ Comments on WordPress posts not only fill your database tables, rather they also
 
 ### Contribution
 
-Development occurs in our [Github monorepo](https://github.com/wpsocio/wp-projects), and all contributions welcome.
+Development takes place in our [Github monorepo](https://github.com/wpsocio/wp-projects), and all contributions welcome.
 
 ## Translation
 

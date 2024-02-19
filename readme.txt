@@ -2,11 +2,11 @@
 Contributors: wpsocio, irshadahmad21
 Donate link: https://wpsocio.com/donate
 Tags: telegram, comments, discuss, social, widget
-Requires at least: 6.2
+Requires at least: 6.4
 Requires PHP: 7.4
-Tested up to: 6.4.1
-Stable tag: 1.1.12
-License: GPLv3
+Tested up to: 6.4.3
+Stable tag: 1.1.13
+License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Add comments to posts/pages on your WordPress website by using Telegram Comments Widget.
@@ -47,7 +47,7 @@ For rules, see the pinned message. No spam please.
 
 == Contribution ==
 
-Development occurs in our [Github monorepo](https://github.com/wpsocio/wp-projects), and all contributions welcome.
+Development takes place in our [Github monorepo](https://github.com/wpsocio/wp-projects), and all contributions welcome.
 
 == Screenshots ==
 
@@ -76,7 +76,7 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 
 == Changelog ==
 
-= 1.1.12 =
-- Enabled support for PHP 7.4 after user feedback
+= 1.1.13 =
+- Updated minimum required WP version to 6.4
 
 [See full changelog](https://github.com/wpsocio/wptelegram-comments/blob/main/CHANGELOG.md)
