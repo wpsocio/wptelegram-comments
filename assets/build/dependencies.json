@@ -3,7 +3,7 @@
     "react",
     "react-dom",
     "wp-i18n",
-    "wp-api-fetch",
-    "jquery"
+    "jquery",
+    "wp-api-fetch"
   ]
 }
