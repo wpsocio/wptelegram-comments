@@ -2,6 +2,7 @@
   "js/settings/index.ts": [
     "react",
     "react-dom",
+    "react-jsx-runtime",
     "wp-i18n",
     "jquery",
     "wp-api-fetch"
