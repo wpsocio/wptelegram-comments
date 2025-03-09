@@ -1,11 +1,11 @@
 {
   "js/settings/index.ts": {
-    "file": "dist/settings-CzbAEsbK.js",
+    "file": "dist/settings-M5AcvqDp.js",
     "name": "settings",
     "src": "js/settings/index.ts",
     "isEntry": true,
     "css": [
-      "dist/settings-Cd0Lj_Fz.css"
+      "dist/settings-Bmc25kKP.css"
     ]
   }
 }
